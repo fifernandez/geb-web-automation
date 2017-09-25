@@ -1,25 +1,18 @@
 package pages
 
 import geb.Page
+import org.openqa.selenium.By
 
 class GoogleHomePage extends Page {
-
     static url = "http://www.google.com"
-
-    static content = {
-
-        entrarButton  (wait: true, required: false) { $('a', text: "Log in") }
-        username  (wait: true, required: false) { $('input', name: "username") }
-        password  (wait: true, required: false) { $('input', name: "password") }
-
-
-        log  (wait: true, required: false) { $('a', class: "_aj7mu _taytv _ki5uo _o0442") }
-
-
+    static at = {
+        waitFor {logo.isDisplayed()}
     }
 
-    void secondClick(){
-        $('button', text: "Log in").click()
+    static content = {
+        logo                                            { $(By.id('hplogo')) }
+        searchText                                      { $(By.id('lst-ib')) }
+        searchButton        (to: GoogleResultsPage)     { $(By.name('btnK')) }
     }
 
 }
