@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 Things you need to install
-*  Java jdk  with JAVA_HOME enviroment varibale configurer.
+*  [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  with JAVA_HOME environment variable configured.
     * [Windows](https://stackoverflow.com/questions/2619584/how-to-set-java-home-on-windows-7/)
     * [Linux](https://stackoverflow.com/questions/24641536/how-to-set-java-home-in-linux-for-all-users)
     * [Mac](https://stackoverflow.com/questions/1348842/what-should-i-set-java-home-to-on-osx)
@@ -30,7 +30,7 @@ Navigate to the repo folder and run
 ./gradlew build idea
 ```
 
-Run IntelliJ and before opening the proyect
+Run IntelliJ and before opening the project
 ```
 click on configure -> project defaults -> project structure.
 Inside project sdk click on new and search the folder where you installed java sdk, and click on Ok.
@@ -56,21 +56,24 @@ Inside the project folder run:
 ./gradlew cucumber
 ```
 
-### Especial parameters
-
-Explain what these tests test and why
+You can run specific scenarios if you add the tags parameter
 
 ```
-Give an example
+./gradlew cucumber -Ptags="@Boca"
 ```
 
 ### And coding style tests
 
-Explain what these tests test and why
-
-```
-Give an example
-```
+* Write the features in the features folder
+    * Assign tags to them
+    * You can parametrize the scenario using 'Scenario Outline'
+* Define your steps in the steps folder
+   * Parametrize buttons, fields, inputs so you can easily reuse steps
+   * Keep good organization of the files, it' a good idea to have one step file per page
+* Create your pages/modules files in the groovy folder
+    * Make a good use of the [Page Object pattern](http://docs.seleniumhq.org/docs/06_test_design_considerations.jsp#page-object-design-pattern)
+* To config your drivers edit: GebConfig.groovy 
+* For changing cucumber configs edit: env.groovy
 
 ## Built With
 
@@ -82,10 +85,6 @@ Give an example
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 ## Authors
 
