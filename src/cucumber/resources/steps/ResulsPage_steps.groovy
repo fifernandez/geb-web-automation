@@ -35,5 +35,5 @@ And(~/On the 'Results' page, I click on the one that says: '(.*)'/) { String sea
 
 Then(~/The first result must contain the text '(.*)'/) { String correct ->
     Navigator firstResult = page.allResults[0]
-    assert correct == firstResult.text()
+    assert firstResult.text().contains(correct)
 }

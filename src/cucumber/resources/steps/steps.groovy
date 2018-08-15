@@ -13,8 +13,8 @@ When(~/I go to the '((?:Google Home))' page/) { String page ->
 
 }
 
-Then(~/The title of the page is '(.*)'/) { String correct ->
+Then(~/The title of the page must contain '(.*)'/) { String correct ->
 
-    assert page.title == correct
+    assert page.title.contains(correct)
 
 }

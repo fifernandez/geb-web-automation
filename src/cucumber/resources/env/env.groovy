@@ -19,7 +19,7 @@ After() { scenario ->
     if (scenario.failed) {
         try {
             scenario.embed(((TakesScreenshot) theBrowser.driver).getScreenshotAs(OutputType.BYTES), "image/png")
-            scenario.write("<div style=\"background-color:white\"><p>URL:  <a href='$theBrowser.driver.currentUrl'>$theBrowser.driver.currentUrl</a></p></div>")
+            //scenario.write("<div style=\"background-color:white\"><p>URL:  <a href='$theBrowser.driver.currentUrl'>$theBrowser.driver.currentUrl</a></p></div>")
         } catch (WebDriverException e) {
         }
     }
