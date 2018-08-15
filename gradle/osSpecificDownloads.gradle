@@ -1,0 +1,198 @@
+import org.apache.tools.ant.taskdefs.condition.Os
+import org.apache.commons.io.FileUtils
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "commons-io:commons-io:2.4"
+    }
+}
+
+ext {
+    geckoDriverVersion = '0.24.0'
+    chromeDriverVersion = '2.39'
+    operaDriverVersion = '2.45'
+    phantomJsDriverVersion = '2.1.1'
+    iExplorerDriverVersion = '3.9.0'
+    defaultBrowser = 'firefox'
+    selectedBrowser = ''
+    extractDir = ''
+}
+
+void setBrowser(){
+    if (selectedBrowser == '') {
+        if (project.hasProperty('env')) {
+            selectedBrowser = project.env
+        } else {
+            selectedBrowser = defaultBrowser
+            println "Environment not set!. Setting default to ${defaultBrowser}!"
+
+        }
+        println "Selected browser: ${selectedBrowser}!"
+    }
+}
+
+task downloadGeckoDriver {
+    def outputFile = file("$buildDir/webdriver/geckodriver-v${geckoDriverVersion}-macos.tar.gz")
+    inputs.property("geckoDriverVersion", geckoDriverVersion)
+    outputs.file(outputFile)
+    doLast {
+        def driverOsFilenamePart = ''
+        if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+            driverOsFilenamePart = "win32"
+        } else if (Os.isFamily(Os.FAMILY_MAC)) {
+            driverOsFilenamePart = 'macos'
+        } else if (Os.isFamily(Os.FAMILY_UNIX)) {
+            driverOsFilenamePart = Os.isArch("amd64") ? "linux64" : "linux32"
+        }
+        String driverURL = "https://github.com/mozilla/geckodriver/releases/download/v${geckoDriverVersion}/geckodriver-v${geckoDriverVersion}-${driverOsFilenamePart}.tar.gz"
+        println "Getting driver from: ${driverURL}"
+        FileUtils.copyURLToFile(new URL(driverURL), outputFile)
+        println 'Done downloading.'
+    }
+}
+
+task getGeckoDriver(type: Copy) {
+    setBrowser()
+    if ((selectedBrowser == 'firefox') && (!file("drivers/geckodriver").exists())) {
+        println "Downloading gecko v${geckoDriverVersion}driver..."
+        def outputDir = file("drivers/")
+        dependsOn downloadGeckoDriver
+        outputs.dir(outputDir)
+        from tarTree(downloadGeckoDriver.outputs.files.singleFile)
+        into(outputDir)
+    }
+}
+
+task downloadChromeDriver {
+    def outputFile = file("$buildDir/webdriver/chromedriver.zip")
+    inputs.property("chromeDriverVersion", chromeDriverVersion)
+    outputs.file(outputFile)
+    doLast {
+        def driverOsFilenamePart = ''
+        if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+            driverOsFilenamePart = "win32"
+        } else if (Os.isFamily(Os.FAMILY_MAC)) {
+            driverOsFilenamePart = Os.isArch("x86_64") ? "mac64" : "mac32"
+        } else if (Os.isFamily(Os.FAMILY_UNIX)) {
+            driverOsFilenamePart = Os.isArch("amd64") ? "linux64" : "linux32"
+        }
+        String driverURL = "http://chromedriver.storage.googleapis.com/${chromeDriverVersion}/chromedriver_${driverOsFilenamePart}.zip"
+        println "Getting driver from: ${driverURL}"
+        FileUtils.copyURLToFile(new URL(driverURL), outputFile)
+        println 'Done downloading.'
+    }
+}
+
+task getChromeDriver(type: Copy) {
+    setBrowser()
+    if (((selectedBrowser == 'chrome') && !file("drivers/chromedriver").exists())) {
+        println "Downloading chrome v${chromeDriverVersion}  driver..."
+        def outputDir = file("drivers/")
+        dependsOn downloadChromeDriver
+        outputs.dir(outputDir)
+        from(zipTree(downloadChromeDriver.outputs.files.singleFile))
+        into(outputDir)
+    }
+}
+
+task downloadOperaDriver {
+    def outputFile = file("$buildDir/webdriver/opera.zip")
+    inputs.property("operaDriverVersion", operaDriverVersion)
+    outputs.file(outputFile)
+    doLast {''
+        def driverOsFilenamePart = ''
+        if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+            driverOsFilenamePart = "win32"
+        } else if (Os.isFamily(Os.FAMILY_MAC)) {
+            driverOsFilenamePart = Os.isArch("x86_64") ? "mac64" : "mac32"
+        } else if (Os.isFamily(Os.FAMILY_UNIX)) {
+            driverOsFilenamePart = Os.isArch("amd64") ? "linux64" : "linux32"
+        }
+        String driverURL = "https://github.com/operasoftware/operachromiumdriver/releases/download/v.${operaDriverVersion}/operadriver_${driverOsFilenamePart}.zip"
+        println "Getting driver from: ${driverURL}"
+        FileUtils.copyURLToFile(new URL(driverURL), outputFile)
+        println 'Done downloading.'
+    }
+}
+
+task getOperaDriver(type: Copy) {
+    setBrowser()
+    if (((selectedBrowser == 'opera') && !file("drivers/operadriver").exists())) {
+        println "Downloading Opera v${operaDriverVersion}  driver..."
+        def outputDir = file("$buildDir/webdriver")
+        dependsOn downloadOperaDriver
+        outputs.dir(outputDir)
+        from(zipTree(downloadOperaDriver.outputs.files.singleFile))
+        into(outputDir)
+        //from("drivers/operadriver/operadriver_mac64")
+        //into(outputDir)
+    }
+}
+
+task downloadPhantomJsDriver {
+    def outputFile = file("$buildDir/webdriver/phantomjs.zip")
+    inputs.property("phantomJsDriverVersion", phantomJsDriverVersion)
+    outputs.file(outputFile)
+    doLast {
+        def driverOsFilenamePart
+        if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+            driverOsFilenamePart = "windows"
+        } else if (Os.isFamily(Os.FAMILY_MAC)) {
+            driverOsFilenamePart = "macosx"
+        } else if (Os.isFamily(Os.FAMILY_UNIX)) {
+            driverOsFilenamePart = Os.isArch("amd64") ? "x86_64" : "linux-i686"
+        }
+        extractDir = "$buildDir/webdriver/phantomjs-${phantomJsDriverVersion}-${driverOsFilenamePart}/bin/phantomjs"
+        String driverURL = "https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-${phantomJsDriverVersion}-${driverOsFilenamePart}.zip"
+        println "Getting driver from: ${driverURL}"
+        FileUtils.copyURLToFile(new URL(driverURL), outputFile)
+        println 'Done downloading.'
+    }
+}
+
+task getPhantomJsDriver(type: Copy) {
+    setBrowser()
+    if (((selectedBrowser == 'phantomjs') && !file("drivers/phantomjs").exists())) {
+        println "Downloading phantomjs v${phantomJsDriverVersion}  driver..."
+        def outputDir = file("$buildDir/webdriver")
+        dependsOn downloadPhantomJsDriver
+        outputs.dir(outputDir)
+        from(zipTree(downloadPhantomJsDriver.outputs.files.singleFile))
+        into(outputDir)
+    }
+}
+
+task downloadIExplorerDriver {
+    doLast {
+        def driverOsFilenamePart = ''
+        if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+            driverOsFilenamePart = Os.isArch("x86_64") ? "x64" : "Win32"
+        } else if (Os.isFamily(Os.FAMILY_MAC)) {
+            driverOsFilenamePart = 'macos'
+        } else if (Os.isFamily(Os.FAMILY_UNIX)) {
+            driverOsFilenamePart = Os.isArch("amd64") ? "linux64" : "linux32"
+        }
+        def outputFile = file("$buildDir/webdriver/IEDriverServer_${driverOsFilenamePart}_${iExplorerDriverVersion}.zip")
+        inputs.property("iExplorerDriverVersion", iExplorerDriverVersion)
+        outputs.file(outputFile)
+        String driverURL = "https://selenium-release.storage.googleapis.com/${iExplorerDriverVersion}/IEDriverServer_${driverOsFilenamePart}_${iExplorerDriverVersion}.zip"
+        println "Getting driver from: ${driverURL}"
+        FileUtils.copyURLToFile(new URL(driverURL), outputFile)
+        println 'Done downloading.'
+    }
+}
+
+task getIExplorerDriver(type: Copy) {
+    setBrowser()
+    if ((selectedBrowser == 'iexplorer') && (!file("drivers/iexplorer").exists())) {
+        println "Downloading iexplorer v${iExplorerDriverVersion}driver..."
+        def outputDir = file("drivers/")
+        dependsOn downloadIExplorerDriver
+        outputs.dir(outputDir)
+        from tarTree(downloadIExplorerDriver.outputs.files.singleFile)
+        into(outputDir)
+    }
+}

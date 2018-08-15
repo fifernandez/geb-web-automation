@@ -1,28 +1,22 @@
-import net.masterthought.cucumber.ReportBuilder
-
-buildscript {
-    dependencies {
-        classpath "net.masterthought:cucumber-reporting:3.10.0"
-    }
-}
-
-plugins {
-    id 'java'
-    id 'groovy'
-    id 'idea'
-    id "com.github.samueltbrown.cucumber" version "0.9"
-}
+apply plugin: 'idea'
+apply plugin: 'groovy'
+apply plugin: 'java'
+apply from: "gradle/osSpecificDownloads.gradle"
+apply from: "cucumber.gradle"
 
 ext {
-    groovyVersion = '2.4.7'
-    gebVersion = '1.1'
-    seleniumVersion = '2.53.1'
+    groovyVersion = '3.0.0-alpha-3'
+    gebVersion = '2.2'
+    //seleniumVersion = '3.14.0'
+    seleniumVersion = '3.4.0'
     cucumberJvmVersion = '1.2.5'
-    chromeDriverVersion = '2.22'
+    //geckoDriverVersion = '0.21.0'
+    //chromeDriverVersion = '2.39'
+    //operaDriverVersion = '2.38'
 }
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
@@ -36,53 +30,8 @@ dependencies {
     testCompile "info.cukes:cucumber-java:$cucumberJvmVersion"
 }
 
-cucumber {
-    formats = ['pretty', 'html:build/reports/cucumber/', 'junit:build/reports/cucumber/cucumber.xml', 'json:build/reports/cucumber/cucumber.json']
-    // glueDirs: Steps, Hooks and Pages definitions (src/cucumber/resources is included automatically)
-    glueDirs = ["src/test/groovy/pages"]
-    // featureDirs: features files, step written in BDD
-    featureDirs = ["src/cucumber/features"]
-    dryRun = false
-    // tests tags
-    if (project.hasProperty('fTags')) {
-        def props = new Properties()
-        new File(tagsPropertiesDir + '/featuresTags.properties').withInputStream {
-            stream -> props.load(stream)
-        }
-        tags = props[project.fTags].split(';')
-    } else {
-        tags = project.tags ? project.tags.split(';') : []
-    }
-    jvmOptions {
-        //systemProperty "env", System.getProperty("env", "lab").toLowerCase()
-        systemProperty "geb.env", System.getProperty("geb.env", "firefox")
-        //systemProperty "hostname", System.getProperty("hostname", "")
-        //systemProperty "device", System.getProperty("device", "")
-    }
-
-    generateReport()
-}
-
-def generateReport() {
-    println "Tests completed. Generating report...."
-    File reportOutputDirectory = new File("${reporting.baseDir}/extended/")
-    def jsonReports = fileTree(dir: "${reporting.baseDir}/cucumber/").include '**.json'.toString()
-    List<String> jsonReportFiles = new ArrayList<String>()
-    jsonReports.each { File file ->
-        jsonReportFiles.add("${reporting.baseDir}/cucumber/${file.name}".toString());
-    }
-    //
-    String title = "Cucumber Report"
-    net.masterthought.cucumber.Configuration configuration = new net.masterthought.cucumber.Configuration(reportOutputDirectory, title)
-    configuration.setParallelTesting(true)
-    configuration.setRunWithJenkins(false)
-    configuration.setBuildNumber("1")
-    ReportBuilder reportBuilder = new ReportBuilder(jsonReportFiles, configuration)
-    reportBuilder.generateReports()
-}
-
 task wrapper(type: Wrapper) {
     description = "Generates a new Gradle Wrapper"
     group = "build"
-    gradleVersion = '4.2'
+    gradleVersion = '4.9'
 }
