@@ -62,6 +62,12 @@ You can run specific scenarios if you add the tags parameter
 ./gradlew cucumber -Ptags="@Boca"
 ```
 
+You can run specific browser (firefox, chrome, safari, opera, phantomjs)
+
+```
+./gradlew cucumber -Ptags="@Boca" -Penv=phantomjs
+```
+
 ### And coding style tests
 
 * Write the features in the features folder
