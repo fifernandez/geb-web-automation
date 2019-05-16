@@ -1,5 +1,6 @@
 import net.masterthought.cucumber.ReportBuilder
 import net.masterthought.cucumber.Configuration
+import org.apache.tools.ant.taskdefs.condition.Os
 
 buildscript {
     repositories {
@@ -19,8 +20,90 @@ task cucumber {
     }
 }
 
+String getDriversLocations(){
+    switch (selectedBrowser){
+        case "chrome":
+            if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+                return "drivers/chromedriver.exe"
+            } else if (Os.isFamily(Os.FAMILY_MAC)) {
+                return "drivers/chromedriver"
+            } else if (Os.isFamily(Os.FAMILY_UNIX)) {
+                return "drivers/chromedriver"
+            }
+            break
+        case "firefox":
+            if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+                return "drivers/geckodriver.exe"
+            } else if (Os.isFamily(Os.FAMILY_MAC)) {
+                return "drivers/geckodriver"
+            } else if (Os.isFamily(Os.FAMILY_UNIX)) {
+                return "drivers/geckodriver"
+            }
+            break
+        case "iexplorer":
+            if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+                return "drivers/IEDriverServer.exe"
+            } else if (Os.isFamily(Os.FAMILY_MAC)) {
+                return "drivers/gec"
+            } else if (Os.isFamily(Os.FAMILY_UNIX)) {
+                return "drivers/gec"
+            }
+            break
+        case "opera":
+            if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+                return "drivers/operadriver"
+            } else if (Os.isFamily(Os.FAMILY_MAC)) {
+                return "drivers/operadriver"
+            } else if (Os.isFamily(Os.FAMILY_UNIX)) {
+                return "drivers/operadriver"
+            }
+            break
+        case "phantomjs":
+            if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+                return "drivers/phantomjs.exe"
+            } else if (Os.isFamily(Os.FAMILY_MAC)) {
+                return "drivers/phantomjs"
+            } else if (Os.isFamily(Os.FAMILY_UNIX)) {
+                return "drivers/phantomjs"
+            }
+            break
+        case "safari":
+            if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+                return "/usr/bin/safaridriver"
+            } else if (Os.isFamily(Os.FAMILY_MAC)) {
+                return "/usr/bin/safaridriver"
+            } else if (Os.isFamily(Os.FAMILY_UNIX)) {
+                return "/usr/bin/safaridriver"
+            }
+            break
+    }
+}
+
+String getDriversProperty(){
+    switch (selectedBrowser){
+        case "chrome":
+            return 'webdriver.chrome.driver'
+            break
+        case "firefox":
+            return 'webdriver.gecko.driver'
+            break
+        case "iexplorer":
+            return 'webdriver.ie.driver'
+            break
+        case "opera":
+            return 'webdriver.opera.driver'
+            break
+        case "phantomjs":
+            return 'webdriver.phantomjs.driver'
+            break
+        case "safari":
+            return 'webdriver.safari.driver'
+            break
+    }
+}
+
 void moveDriverFileToFolder(){
-    if (((selectedBrowser != '') && !file("drivers/${selectedBrowser}").exists()) && (extractDir != '')) {
+    if (((selectedBrowser != '') && !file(getDriversLocations()).exists()) && (extractDir != '')) {
         println "Moving the driver file!"
         ant.move file: extractDir, todir: "drivers/"
     }
@@ -40,10 +123,8 @@ void lunchCucumberCli(List<String> cucumberTags) {
     cucumberArgs.addAll(cucumberTags)
     try {
         javaexec {
-            systemProperty 'webdriver.gecko.driver', "drivers/geckodriver"
-            systemProperty 'webdriver.chrome.driver', "drivers/chromedriver"
-            systemProperty 'webdriver.safari.driver', "/usr/bin/safaridriver"
-            systemProperty 'webdriver.opera.driver', "drivers/operadriver"
+            println getDriversProperty() + getDriversLocations()
+            systemProperty getDriversProperty(), getDriversLocations()
             jvmArgs = ["-Dgeb.env=${selectedBrowser}"]
             main = "cucumber.api.cli.Main"
             classpath = sourceSets.test.runtimeClasspath + sourceSets.main.runtimeClasspath

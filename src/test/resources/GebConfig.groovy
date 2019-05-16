@@ -19,13 +19,13 @@ environments {
         driver = { new ChromeDriver() }
     }
 
-    safari {
-        driver = { new SafariDriver() }
+    iexplorer {
+        driver = { new InternetExplorerDriver() }
     }
 
     opera {
-        OperaOptions options = new OperaOptions();
-        options.setBinary("drivers/operadriver")
+        OperaOptions options = new OperaOptions()
+        options.setBinary(System.getProperty('webdriver.opera.driver'))
         options.addArguments("--headless")
         options.addArguments("--no-sandbox")
         options.addArguments("--disable-dev-shm-usage")
@@ -36,13 +36,14 @@ environments {
     phantomjs {
         DesiredCapabilities caps = new DesiredCapabilities()
         caps.setJavascriptEnabled(true)
-        caps.setCapability("phantomjs.binary.path", "drivers/phantomjs")
+        caps.setCapability("phantomjs.binary.path", System.getProperty('webdriver.phantomjs.driver'))
         driver = { new PhantomJSDriver(caps) }
     }
 
-    iexplorer {
-        driver = { new InternetExplorerDriver() }
+    safari {
+        driver = { new SafariDriver() }
     }
+
 }
 
 waiting {
