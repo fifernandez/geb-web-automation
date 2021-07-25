@@ -1,31 +1,23 @@
-import net.masterthought.cucumber.ReportBuilder
-import net.masterthought.cucumber.Configuration
-import org.apache.tools.ant.taskdefs.condition.Os
 import org.apache.commons.io.FileUtils
+import net.masterthought.cucumber.ReportBuilder
+import org.apache.tools.ant.taskdefs.condition.Os
 
 buildscript {
     repositories {
         mavenCentral()
     }
     dependencies {
-        classpath "net.masterthought:cucumber-reporting:3.19.0"
         classpath "commons-io:commons-io:2.4"
+        classpath "net.masterthought:cucumber-reporting:5.5.4"
     }
 }
 
 ext {
+    geckoDriverVersion = '0.24.0'
+    chromeDriverVersion = '91.0.4472.101'
     defaultBrowser = 'firefox'
     selectedBrowser = ''
-    osx = ''
-    driverLocationDir = ''
-    driverGlobalProperty = ''
     extractDir = ''
-
-    geckoDriverVersion = '0.24.0'
-    chromeDriverVersion = '2.39'
-    operaDriverVersion = '2.45'
-    phantomJsDriverVersion = '2.1.1'
-    iExplorerDriverVersion = '3.9.0'
 }
 
 void setBrowser(){
@@ -41,169 +33,36 @@ void setBrowser(){
     }
 }
 
-void setOSX(){
-    if (Os.isFamily(Os.FAMILY_WINDOWS)) {
-        osx = 'windows'
-    } else if (Os.isFamily(Os.FAMILY_MAC)) {
-        osx = 'mac'
-    } else if (Os.isFamily(Os.FAMILY_UNIX)) {
-        osx = 'unix'
-    }
-}
-
-void setDriverLocation(){
+String getDriversLocations(){
     switch (selectedBrowser){
         case "chrome":
-            if (osx == 'windows') {
-                driverLocationDir = "drivers/chromedriver.exe"
-            } else if (osx == 'mac') {
-                driverLocationDir = "drivers/chromedriver"
-            } else if (osx == 'unix') {
-                driverLocationDir = "drivers/chromedriver"
+            if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+                return "drivers/chromedriver.exe"
+            } else if (Os.isFamily(Os.FAMILY_MAC)) {
+                return "drivers/chromedriver"
+            } else if (Os.isFamily(Os.FAMILY_UNIX)) {
+                return "drivers/chromedriver"
             }
             break
         case "firefox":
-            if (osx == 'windows') {
-                driverLocationDir = "drivers/geckodriver.exe"
-            } else if (osx == 'mac') {
-                driverLocationDir = "drivers/geckodriver"
-            } else if (osx == 'unix') {
-                driverLocationDir = "drivers/geckodriver"
-            }
-            break
-        case "iexplorer":
-            if (osx == 'windows') {
-                driverLocationDir = "drivers/IEDriverServer.exe"
-            } else if (osx == 'mac') {
-                driverLocationDir = "drivers/gec"
-            } else if (osx == 'unix') {
-                driverLocationDir = "drivers/gec"
-            }
-            break
-        case "opera":
-            if (osx == 'windows') {
-                driverLocationDir = "drivers/operadriver"
-            } else if (osx == 'mac') {
-                driverLocationDir = "drivers/operadriver"
-            } else if (osx == 'unix') {
-                driverLocationDir = "drivers/operadriver"
-            }
-            break
-        case "phantomjs":
-            if (osx == 'windows') {
-                driverLocationDir = "drivers/phantomjs.exe"
-            } else if (osx == 'mac') {
-                driverLocationDir = "drivers/phantomjs"
-            } else if (osx == 'unix') {
-                driverLocationDir = "drivers/phantomjs"
-            }
-            break
-        case "safari":
-            if (osx == 'windows') {
-                driverLocationDir = "/usr/bin/safaridriver"
-            } else if (osx == 'mac') {
-                driverLocationDir = "/usr/bin/safaridriver"
-            } else if (osx == 'unix') {
-                driverLocationDir = "/usr/bin/safaridriver"
+            if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+                return "drivers/geckodriver.exe"
+            } else if (Os.isFamily(Os.FAMILY_MAC)) {
+                return "drivers/geckodriver"
+            } else if (Os.isFamily(Os.FAMILY_UNIX)) {
+                return "drivers/geckodriver"
             }
             break
     }
-}
-
-void setDriverGlobalProperty(){
-    switch (selectedBrowser){
-        case "chrome":
-            driverGlobalProperty = 'webdriver.chrome.driver'
-            break
-        case "firefox":
-            driverGlobalProperty = 'webdriver.gecko.driver'
-            break
-        case "iexplorer":
-            driverGlobalProperty = 'webdriver.ie.driver'
-            break
-        case "opera":
-            driverGlobalProperty = 'webdriver.opera.driver'
-            break
-        case "phantomjs":
-            driverGlobalProperty = 'webdriver.phantomjs.driver'
-            break
-        case "safari":
-            driverGlobalProperty = 'webdriver.safari.driver'
-            break
-    }
-}
-
-void moveDriverFileToFolder(){
-    if (((selectedBrowser != '') && !file(driverLocationDir).exists()) && (extractDir != '')) {
-        println "Moving the driver file!"
-        ant.move file: extractDir, todir: "drivers/"
-    }
-}
-
-void single(List<String> cucumberTags) {
-    lunchCucumberCli(cucumberTags)
-    generateReport()
-}
-
-void lunchCucumberCli(List<String> cucumberTags) {
-    println "Running the tests!!"
-    List<String> cucumberArgs = []
-    cucumberArgs = ['--plugin', 'pretty', '--plugin', "json:${reporting.baseDir}/${selectedBrowser}.json",
-                    '--plugin', "html:${reporting.baseDir}/cucumber-html-report-1", '--glue',
-                    'src/cucumber/', 'src/test/groovy/', 'src/test/resources/', 'src/cucumber/features']
-    cucumberArgs.addAll(cucumberTags)
-    try {
-        javaexec {
-            systemProperty driverGlobalProperty, driverLocationDir
-            jvmArgs = ["-Dgeb.env=${selectedBrowser}"]
-            main = "cucumber.api.cli.Main"
-            classpath = sourceSets.test.runtimeClasspath + sourceSets.main.runtimeClasspath
-            args = cucumberArgs
-        }
-    }
-    catch (Exception e) {
-    }
-}
-
-List<String> parseTags() {
-    List<String> result = []
-    if (project.hasProperty('tags')) {
-        project.tags.replace(' ', '').split('&').each {
-            result << '--tags '
-            result << it.replace('|', ',')
-        }
-    } else {
-        println "No tags. Running for all!"
-    }
-    result << '--tags '
-    result << '~@ignore'
-    return result
-}
-
-def generateReport() {
-    println "Tests completed. Generating report...."
-    File reportOutputDirectory = new File("${reporting.baseDir}/")
-    def jsonReports = fileTree(dir: "${reporting.baseDir}/").include '**.json'.toString()
-    List<String> jsonReportFiles = new ArrayList<String>()
-    jsonReports.each { File file ->
-        jsonReportFiles.add("${reporting.baseDir}/${file.name}".toString())
-    }
-    String title = "Basic Web Automation Report"
-    Configuration configuration = new net.masterthought.cucumber.Configuration(reportOutputDirectory, title)
-    configuration.setParallelTesting(true)
-    configuration.setRunWithJenkins(false)
-    configuration.setBuildNumber("1")
-    ReportBuilder reportBuilder = new ReportBuilder(jsonReportFiles, configuration)
-    reportBuilder.generateReports()
 }
 
 task downloadGeckoDriver {
     def driverOsFilenamePart = ''
-    if (osx == 'windows') {
+    if (Os.isFamily(Os.FAMILY_WINDOWS)) {
         driverOsFilenamePart = Os.isArch("x86_64") ? "win32.zip" : "win64.zip"
-    } else if (osx == 'mac') {
+    } else if (Os.isFamily(Os.FAMILY_MAC)) {
         driverOsFilenamePart = 'macos.tar.gz'
-    } else if (osx == 'unix') {
+    } else if (Os.isFamily(Os.FAMILY_UNIX)) {
         driverOsFilenamePart = Os.isArch("amd64") ? "linux64.tar.gz" : "linux32.tar.gz"
     }
     def outputFile = file("$buildDir/webdriver/geckodriver-v${geckoDriverVersion}-${driverOsFilenamePart}")
@@ -218,7 +77,8 @@ task downloadGeckoDriver {
 }
 
 task getGeckoDriver(type: Copy) {
-    if ((selectedBrowser == 'firefox') && (!file(driverLocationDir).exists())) {
+    setBrowser()
+    if ((selectedBrowser == 'firefox') && (!file(getDriversLocations()).exists())) {
         println "Downloading gecko v${geckoDriverVersion}driver..."
         def outputDir = file("drivers/")
         dependsOn downloadGeckoDriver
@@ -241,11 +101,11 @@ task downloadChromeDriver {
     outputs.file(outputFile)
     doLast {
         def driverOsFilenamePart = ''
-        if (osx == 'windows') {
+        if (Os.isFamily(Os.FAMILY_WINDOWS)) {
             driverOsFilenamePart = "win32"
-        } else if (osx == 'mac') {
+        } else if (Os.isFamily(Os.FAMILY_MAC)) {
             driverOsFilenamePart = Os.isArch("x86_64") ? "mac64" : "mac32"
-        } else if (osx == 'unix') {
+        } else if (Os.isFamily(Os.FAMILY_UNIX)) {
             driverOsFilenamePart = Os.isArch("amd64") ? "linux64" : "linux32"
         }
         String driverURL = "http://chromedriver.storage.googleapis.com/${chromeDriverVersion}/chromedriver_${driverOsFilenamePart}.zip"
@@ -256,7 +116,8 @@ task downloadChromeDriver {
 }
 
 task getChromeDriver(type: Copy) {
-    if (((selectedBrowser == 'chrome') && !file(driverLocationDir).exists())) {
+    setBrowser()
+    if (((selectedBrowser == 'chrome') && !file(getDriversLocations()).exists())) {
         println "Downloading chrome v${chromeDriverVersion}  driver..."
         def outputDir = file("drivers/")
         dependsOn downloadChromeDriver
@@ -266,108 +127,8 @@ task getChromeDriver(type: Copy) {
     }
 }
 
-task downloadOperaDriver {
-    def outputFile = file("$buildDir/webdriver/opera.zip")
-    inputs.property("operaDriverVersion", operaDriverVersion)
-    outputs.file(outputFile)
-    doLast {''
-        def driverOsFilenamePart = ''
-        if (osx == 'windows') {
-            driverOsFilenamePart = "win32"
-        } else if (osx == 'mac') {
-            driverOsFilenamePart = Os.isArch("x86_64") ? "mac64" : "mac32"
-        } else if (osx == 'unix') {
-            driverOsFilenamePart = Os.isArch("amd64") ? "linux64" : "linux32"
-        }
-        String driverURL = "https://github.com/operasoftware/operachromiumdriver/releases/download/v.${operaDriverVersion}/operadriver_${driverOsFilenamePart}.zip"
-        println "Getting driver from: ${driverURL}"
-        FileUtils.copyURLToFile(new URL(driverURL), outputFile)
-        println 'Done downloading.'
-    }
-}
-
-task getOperaDriver(type: Copy) {
-    if (((selectedBrowser == 'opera') && !file(driverLocationDir).exists())) {
-        println "Downloading Opera v${operaDriverVersion}  driver..."
-        def outputDir = file("$buildDir/webdriver")
-        dependsOn downloadOperaDriver
-        outputs.dir(outputDir)
-        from(zipTree(downloadOperaDriver.outputs.files.singleFile))
-        into(outputDir)
-        //from("drivers/operadriver/operadriver_mac64")
-        //into(outputDir)
-    }
-}
-
-task downloadPhantomJsDriver {
-    def outputFile = file("$buildDir/webdriver/phantomjs.zip")
-    inputs.property("phantomJsDriverVersion", phantomJsDriverVersion)
-    outputs.file(outputFile)
-    doLast {
-        def driverOsFilenamePart
-        if (osx == 'windows') {
-            driverOsFilenamePart = "windows"
-        } else if (osx == 'mac') {
-            driverOsFilenamePart = "macosx"
-        } else if (osx == 'unix') {
-            driverOsFilenamePart = Os.isArch("amd64") ? "x86_64" : "linux-i686"
-        }
-        extractDir = "$buildDir/webdriver/phantomjs-${phantomJsDriverVersion}-${driverOsFilenamePart}/bin/phantomjs"
-        if (driverOsFilenamePart.contains("windows")){
-            extractDir = extractDir + ".exe"
-        }
-        String driverURL = "https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-${phantomJsDriverVersion}-${driverOsFilenamePart}.zip"
-        println "Getting driver from: ${driverURL}"
-        FileUtils.copyURLToFile(new URL(driverURL), outputFile)
-        println 'Done downloading.'
-    }
-}
-
-task getPhantomJsDriver(type: Copy) {
-    if (((selectedBrowser == 'phantomjs') && !file(driverLocationDir).exists())) {
-        println "Downloading phantomjs v${phantomJsDriverVersion}  driver..."
-        def outputDir = file("$buildDir/webdriver")
-        dependsOn downloadPhantomJsDriver
-        outputs.dir(outputDir)
-        from(zipTree(downloadPhantomJsDriver.outputs.files.singleFile))
-        into(outputDir)
-    }
-}
-
-task downloadIExplorerDriver {
-    def driverOsFilenamePart = ''
-    if (osx == 'windows') {
-        driverOsFilenamePart = Os.isArch("x86_64") ? "x64" : "Win32"
-    } else if (osx == 'mac') {
-        driverOsFilenamePart = 'macos'
-    } else if (osx == 'unix') {
-        driverOsFilenamePart = Os.isArch("amd64") ? "linux64" : "linux32"
-    }
-    def outputFile = file("$buildDir/webdriver/IEDriverServer_${driverOsFilenamePart}_${iExplorerDriverVersion}.zip")
-    inputs.property("iExplorerDriverVersion", iExplorerDriverVersion)
-    outputs.file(outputFile)
-    doLast {
-        String driverURL = "https://selenium-release.storage.googleapis.com/${iExplorerDriverVersion}/IEDriverServer_${driverOsFilenamePart}_${iExplorerDriverVersion}.zip"
-        println "Getting driver from: ${driverURL}"
-        FileUtils.copyURLToFile(new URL(driverURL), outputFile)
-        println 'Done downloading.'
-    }
-}
-
-task getIExplorerDriver(type: Copy) {
-    if ((selectedBrowser == 'iexplorer') && (!file(driverLocationDir).exists())) {
-        println "Downloading iexplorer v${iExplorerDriverVersion}driver..."
-        def outputDir = file("drivers/")
-        dependsOn downloadIExplorerDriver
-        outputs.dir(outputDir)
-        from(zipTree(downloadIExplorerDriver.outputs.files.singleFile))
-        into(outputDir)
-    }
-}
-
-task runCucumber {
-    dependsOn assemble, compileTestGroovy, getGeckoDriver, getChromeDriver, getOperaDriver, getPhantomJsDriver, getIExplorerDriver
-
+task cucumber {
+    dependsOn getGeckoDriver, getChromeDriver
     doLast {
         moveDriverFileToFolder()
         List<String> cucumberTags = parseTags()
@@ -375,15 +136,73 @@ task runCucumber {
     }
 }
 
-task cucumber {
-
-    setBrowser()
-    setOSX()
-    setDriverLocation()
-    setDriverGlobalProperty()
-
+String getDriversProperty(){
+    switch (selectedBrowser){
+        case "chrome":
+            return 'webdriver.chrome.driver'
+            break
+        case "firefox":
+            return 'webdriver.gecko.driver'
+            break
+    }
 }
 
-if (project.hasProperty("cucumber")) {
-    cucumber.finalizedBy runCucumber
+void moveDriverFileToFolder(){
+    if (((selectedBrowser != '') && !file(getDriversLocations()).exists()) && (extractDir != '')) {
+        println "Moving the driver file!"
+        ant.move file: extractDir, todir: "drivers/"
+    }
+}
+
+void single(List<String> cucumberTags) {
+    lunchCucumberCli(cucumberTags)
+    generateReport()
+}
+
+void lunchCucumberCli(List<String> cucumberTags) {
+    println "Running the tests!!"
+    List<String> cucumberArgs = []
+    cucumberArgs = ['--plugin', 'pretty', '--plugin', "json:${reporting.baseDir}/${selectedBrowser}.json",
+                    '--plugin', "html:${reporting.baseDir}/cucumber-html-report-1",
+                    '--glue', 'support', 'src/test/resources/features'
+    ]
+    cucumberArgs.addAll(cucumberTags)
+    try {
+        javaexec {
+            systemProperty getDriversProperty(), getDriversLocations()
+            jvmArgs = ["-Dgeb.env=${selectedBrowser}"]
+            main = "io.cucumber.core.cli.Main"
+            classpath = sourceSets.test.runtimeClasspath + sourceSets.main.runtimeClasspath
+            args = cucumberArgs
+        }
+    }
+    catch (Exception e) {
+    }
+}
+
+List<String> parseTags() {
+    List<String> result = []
+    if (project.hasProperty('tags')) {
+        result << '--tags '
+        result << project.tags
+    } else {
+        println "No tags. Running for all!"
+    }
+    result << '--tags '
+    result << 'not @ignore'
+    return result
+}
+
+def generateReport() {
+    println "Tests completed. Generating report...."
+    File reportOutputDirectory = new File("${reporting.baseDir}/")
+    def jsonReports = fileTree(dir: "${reporting.baseDir}/").include '**.json'.toString()
+    List<String> jsonReportFiles = new ArrayList<String>()
+    jsonReports.each { File file ->
+        jsonReportFiles.add("${reporting.baseDir}/${file.name}".toString())
+    }
+    String title = "Basic Web Automation Report"
+    net.masterthought.cucumber.Configuration configuration = new net.masterthought.cucumber.Configuration(reportOutputDirectory, title)
+    ReportBuilder reportBuilder = new ReportBuilder(jsonReportFiles, configuration)
+    reportBuilder.generateReports()
 }
