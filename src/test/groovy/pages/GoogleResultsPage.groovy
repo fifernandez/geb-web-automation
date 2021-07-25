@@ -9,7 +9,7 @@ class GoogleResultsPage extends Page {
     }
 
     static content = {
-        resultsCount                { $(By.id('resultStats')) }
+        resultsCount                { $(By.id('result-stats')) }
         allResults                  { $('div', class:'g').find('h3').find('a') }
     }
 

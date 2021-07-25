@@ -2,9 +2,7 @@ import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.firefox.FirefoxDriver
 import org.openqa.selenium.opera.OperaDriver
 import org.openqa.selenium.opera.OperaOptions
-import org.openqa.selenium.remote.DesiredCapabilities
 import org.openqa.selenium.safari.SafariDriver
-import org.openqa.selenium.phantomjs.PhantomJSDriver
 import org.openqa.selenium.ie.InternetExplorerDriver
 
 driver = {
@@ -31,13 +29,6 @@ environments {
         options.addArguments("--disable-dev-shm-usage")
 
         driver = { new OperaDriver(options) }
-    }
-
-    phantomjs {
-        DesiredCapabilities caps = new DesiredCapabilities()
-        caps.setJavascriptEnabled(true)
-        caps.setCapability("phantomjs.binary.path", System.getProperty('webdriver.phantomjs.driver'))
-        driver = { new PhantomJSDriver(caps) }
     }
 
     safari {

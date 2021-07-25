@@ -1,11 +1,13 @@
-package steps
+package support.steps
 
 import geb.navigator.Navigator
 import pages.BocaJuniorsPage
 import pages.UnknownPage
-import static cucumber.api.groovy.EN.*
+import io.cucumber.groovy.EN
 
-And(~/On the 'Results' page, I click on: '((?:The first result))'/) { String button ->
+this.metaClass.mixin(EN)
+
+And(~/^On the 'Results' page, I click on: '((?:The first result))'/) { String button ->
     switch (button) {
         case 'The first result':
             Navigator firstResult = page.allResults[0]
@@ -15,7 +17,7 @@ And(~/On the 'Results' page, I click on: '((?:The first result))'/) { String but
     }
 }
 
-And(~/On the 'Results' page, I click on the one that says: '(.*)'/) { String searchValue ->
+And(~/^On the 'Results' page, I click on the one that says: '(.*)'/) { String searchValue ->
     for (i in 0..page.allResults.size() -1) {
         Navigator actual = page.allResults[i]
         if (actual.text() == searchValue) {
@@ -33,7 +35,7 @@ And(~/On the 'Results' page, I click on the one that says: '(.*)'/) { String sea
     }
 }
 
-Then(~/The first result must contain the text '(.*)'/) { String correct ->
+Then(~/^The first result must contain the text '(.*)'/) { String correct ->
     Navigator firstResult = page.allResults[0]
-    assert correct == firstResult.text()
+    assert firstResult.text().contains(correct)
 }

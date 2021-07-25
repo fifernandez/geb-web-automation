@@ -1,18 +1,13 @@
 apply plugin: 'idea'
 apply plugin: 'groovy'
-apply plugin: 'java'
 apply from: "gradle/osSpecificDownloads.gradle"
 apply from: "cucumber.gradle"
 
 ext {
-    groovyVersion = '3.0.0-alpha-3'
-    gebVersion = '2.2'
-    //seleniumVersion = '3.14.0'
-    seleniumVersion = '3.4.0'
-    cucumberJvmVersion = '1.2.5'
-    //geckoDriverVersion = '0.21.0'
-    //chromeDriverVersion = '2.39'
-    //operaDriverVersion = '2.38'
+    groovyVersion = '3.0.8'
+    gebVersion = '5.0-milestone-2'
+    seleniumVersion = '3.141.59'
+    cucumberJvmVersion = '1.2.6'
 }
 
 repositories {
@@ -20,18 +15,9 @@ repositories {
 }
 
 dependencies {
-    compile "org.codehaus.groovy:groovy-all:$groovyVersion"
+    testCompile "org.codehaus.groovy:groovy-all:$groovyVersion"
     testCompile "org.gebish:geb-core:$gebVersion"
     testCompile "org.seleniumhq.selenium:selenium-server:${seleniumVersion}"
-    testCompile 'junit:junit:4.12'
-    testCompile "info.cukes:cucumber-core:$cucumberJvmVersion"
-    testCompile "info.cukes:cucumber-junit:$cucumberJvmVersion"
-    testCompile "info.cukes:cucumber-groovy:$cucumberJvmVersion"
-    testCompile "info.cukes:cucumber-java:$cucumberJvmVersion"
-}
-
-task wrapper(type: Wrapper) {
-    description = "Generates a new Gradle Wrapper"
-    group = "build"
-    gradleVersion = '4.9'
+    testCompile "io.cucumber:cucumber-groovy:6.10.4"
+    testCompile "io.cucumber:cucumber-junit:6.10.4"
 }

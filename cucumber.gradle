@@ -1,5 +1,4 @@
 import net.masterthought.cucumber.ReportBuilder
-import net.masterthought.cucumber.Configuration
 import org.apache.tools.ant.taskdefs.condition.Os
 
 buildscript {
@@ -7,12 +6,12 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath "net.masterthought:cucumber-reporting:3.19.0"
+        classpath "net.masterthought:cucumber-reporting:5.5.4"
     }
 }
 
 task cucumber {
-    dependsOn assemble, compileTestGroovy, getGeckoDriver, getChromeDriver, getOperaDriver, getPhantomJsDriver, getIExplorerDriver
+    dependsOn getGeckoDriver, getChromeDriver
     doLast {
         moveDriverFileToFolder()
         List<String> cucumberTags = parseTags()
@@ -40,42 +39,6 @@ String getDriversLocations(){
                 return "drivers/geckodriver"
             }
             break
-        case "iexplorer":
-            if (Os.isFamily(Os.FAMILY_WINDOWS)) {
-                return "drivers/IEDriverServer.exe"
-            } else if (Os.isFamily(Os.FAMILY_MAC)) {
-                return "drivers/gec"
-            } else if (Os.isFamily(Os.FAMILY_UNIX)) {
-                return "drivers/gec"
-            }
-            break
-        case "opera":
-            if (Os.isFamily(Os.FAMILY_WINDOWS)) {
-                return "drivers/operadriver"
-            } else if (Os.isFamily(Os.FAMILY_MAC)) {
-                return "drivers/operadriver"
-            } else if (Os.isFamily(Os.FAMILY_UNIX)) {
-                return "drivers/operadriver"
-            }
-            break
-        case "phantomjs":
-            if (Os.isFamily(Os.FAMILY_WINDOWS)) {
-                return "drivers/phantomjs.exe"
-            } else if (Os.isFamily(Os.FAMILY_MAC)) {
-                return "drivers/phantomjs"
-            } else if (Os.isFamily(Os.FAMILY_UNIX)) {
-                return "drivers/phantomjs"
-            }
-            break
-        case "safari":
-            if (Os.isFamily(Os.FAMILY_WINDOWS)) {
-                return "/usr/bin/safaridriver"
-            } else if (Os.isFamily(Os.FAMILY_MAC)) {
-                return "/usr/bin/safaridriver"
-            } else if (Os.isFamily(Os.FAMILY_UNIX)) {
-                return "/usr/bin/safaridriver"
-            }
-            break
     }
 }
 
@@ -86,18 +49,6 @@ String getDriversProperty(){
             break
         case "firefox":
             return 'webdriver.gecko.driver'
-            break
-        case "iexplorer":
-            return 'webdriver.ie.driver'
-            break
-        case "opera":
-            return 'webdriver.opera.driver'
-            break
-        case "phantomjs":
-            return 'webdriver.phantomjs.driver'
-            break
-        case "safari":
-            return 'webdriver.safari.driver'
             break
     }
 }
@@ -118,15 +69,15 @@ void lunchCucumberCli(List<String> cucumberTags) {
     println "Running the tests!!"
     List<String> cucumberArgs = []
     cucumberArgs = ['--plugin', 'pretty', '--plugin', "json:${reporting.baseDir}/${selectedBrowser}.json",
-                    '--plugin', "html:${reporting.baseDir}/cucumber-html-report-1", '--glue',
-                    'src/cucumber/', 'src/test/groovy/', 'src/test/resources/', 'src/cucumber/features']
+                    '--plugin', "html:${reporting.baseDir}/cucumber-html-report-1",
+                    '--glue', 'support', 'src/test/resources/features'
+    ]
     cucumberArgs.addAll(cucumberTags)
     try {
         javaexec {
-            println getDriversProperty() + getDriversLocations()
             systemProperty getDriversProperty(), getDriversLocations()
             jvmArgs = ["-Dgeb.env=${selectedBrowser}"]
-            main = "cucumber.api.cli.Main"
+            main = "io.cucumber.core.cli.Main"
             classpath = sourceSets.test.runtimeClasspath + sourceSets.main.runtimeClasspath
             args = cucumberArgs
         }
@@ -138,15 +89,13 @@ void lunchCucumberCli(List<String> cucumberTags) {
 List<String> parseTags() {
     List<String> result = []
     if (project.hasProperty('tags')) {
-        project.tags.replace(' ', '').split('&').each {
-            result << '--tags '
-            result << it.replace('|', ',')
-        }
+        result << '--tags '
+        result << project.tags
     } else {
         println "No tags. Running for all!"
     }
     result << '--tags '
-    result << '~@ignore'
+    result << 'not @ignore'
     return result
 }
 
@@ -159,10 +108,7 @@ def generateReport() {
         jsonReportFiles.add("${reporting.baseDir}/${file.name}".toString())
     }
     String title = "Basic Web Automation Report"
-    Configuration configuration = new net.masterthought.cucumber.Configuration(reportOutputDirectory, title)
-    configuration.setParallelTesting(true)
-    configuration.setRunWithJenkins(false)
-    configuration.setBuildNumber("1")
+    net.masterthought.cucumber.Configuration configuration = new net.masterthought.cucumber.Configuration(reportOutputDirectory, title)
     ReportBuilder reportBuilder = new ReportBuilder(jsonReportFiles, configuration)
     reportBuilder.generateReports()
 }

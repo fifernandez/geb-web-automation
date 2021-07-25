@@ -1,12 +1,13 @@
-package steps
+package support.steps
 
 import org.openqa.selenium.Keys
 import org.openqa.selenium.interactions.Actions
 import pages.GoogleResultsPage
+import io.cucumber.groovy.EN
 
-import static cucumber.api.groovy.EN.*
+this.metaClass.mixin(EN)
 
-And(~/On the 'Google Home' page, in the '(.*)' I type: '(.*)'/) { String field, value ->
+And(~/^On the 'Google Home' page, in the '(.*)' I type: '(.*)'/) { String field, value ->
     switch (field) {
         case 'Search Text':
             page.searchText << value
@@ -17,7 +18,7 @@ And(~/On the 'Google Home' page, in the '(.*)' I type: '(.*)'/) { String field, 
     }
 }
 
-And(~/On the 'Google Home' page, I click on: '((?:Search Button))'/) { String button ->
+And(~/^On the 'Google Home' page, I click on: '((?:Search Button))'/) { String button ->
     switch (button) {
         case 'Search Button':
             //page.searchButton.click()

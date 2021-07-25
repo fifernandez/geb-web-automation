@@ -46,8 +46,6 @@ Wait for loading.
 Click on import gradle project and click on ok.
 Wait for loading.
 On the menu bar clin on view -> tool windows -> project
-folders : features and groovy must be marked as test sources root (green)
-folders: resources must be marked as test resources root (yellow icon)
 ```
 
 ## Running the tests
