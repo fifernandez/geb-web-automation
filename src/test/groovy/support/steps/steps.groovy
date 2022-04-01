@@ -5,7 +5,7 @@ import io.cucumber.groovy.EN
 
 this.metaClass.mixin(EN)
 
-When(~/^I go to the '((?:Google Home))' page/) { String page ->
+When(~/^I go to the '(Google Home)' page$/) { String page ->
     switch (page) {
         case 'Google Home':
             to GoogleHomePage
@@ -13,6 +13,6 @@ When(~/^I go to the '((?:Google Home))' page/) { String page ->
     }
 }
 
-Then(~/^The title of the page must contain '(.*)'/) { String correct ->
+Then(~/^The title of the page must contain '(.*)'$/) { String correct ->
     assert page.title.toLowerCase().contains(correct.toLowerCase())
 }

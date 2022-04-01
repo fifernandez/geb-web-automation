@@ -7,7 +7,7 @@ import io.cucumber.groovy.EN
 
 this.metaClass.mixin(EN)
 
-And(~/^On the 'Results' page, I click on: '((?:The first result))'/) { String button ->
+And(~/^On the 'Results' page, I click on: '(The first result)'$/) { String button ->
     switch (button) {
         case 'The first result':
             Navigator firstResult = page.allResults[0]
@@ -17,7 +17,7 @@ And(~/^On the 'Results' page, I click on: '((?:The first result))'/) { String bu
     }
 }
 
-And(~/^On the 'Results' page, I click on the one that says: '(.*)'/) { String searchValue ->
+And(~/^On the 'Results' page, I click on the one that says: '(.*)'$/) { String searchValue ->
     for (i in 0..page.allResults.size() -1) {
         Navigator actual = page.allResults[i]
         if (actual.text() == searchValue) {
@@ -35,7 +35,7 @@ And(~/^On the 'Results' page, I click on the one that says: '(.*)'/) { String se
     }
 }
 
-Then(~/^The first result must contain the text '(.*)'/) { String correct ->
+Then(~/^The first result must contain the text '(.*)'$/) { String correct ->
     Navigator firstResult = page.allResults[0]
     assert firstResult.text().contains(correct)
 }
