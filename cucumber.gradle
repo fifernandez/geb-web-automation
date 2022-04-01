@@ -13,14 +13,14 @@ buildscript {
 }
 
 ext {
-    geckoDriverVersion = '0.24.0'
-    chromeDriverVersion = '91.0.4472.101'
+    geckoDriverVersion = '0.30.0'
+    chromeDriverVersion = '100.0.4896.60'
     defaultBrowser = 'firefox'
     selectedBrowser = ''
     extractDir = ''
 }
 
-void setBrowser(){
+void setBrowser() {
     if (selectedBrowser == '') {
         if (project.hasProperty('env')) {
             selectedBrowser = project.env
@@ -33,8 +33,8 @@ void setBrowser(){
     }
 }
 
-String getDriversLocations(){
-    switch (selectedBrowser){
+String getDriversLocations() {
+    switch (selectedBrowser) {
         case "chrome":
             if (Os.isFamily(Os.FAMILY_WINDOWS)) {
                 return "drivers/chromedriver.exe"
@@ -87,8 +87,7 @@ task getGeckoDriver(type: Copy) {
         if (expandFile.contains("zip")) {
             from(zipTree(downloadGeckoDriver.outputs.files.singleFile))
             into(outputDir)
-        }
-        else {
+        } else {
             from tarTree(downloadGeckoDriver.outputs.files.singleFile)
             into(outputDir)
         }
@@ -136,8 +135,8 @@ task cucumber {
     }
 }
 
-String getDriversProperty(){
-    switch (selectedBrowser){
+String getDriversProperty() {
+    switch (selectedBrowser) {
         case "chrome":
             return 'webdriver.chrome.driver'
             break
@@ -147,7 +146,7 @@ String getDriversProperty(){
     }
 }
 
-void moveDriverFileToFolder(){
+void moveDriverFileToFolder() {
     if (((selectedBrowser != '') && !file(getDriversLocations()).exists()) && (extractDir != '')) {
         println "Moving the driver file!"
         ant.move file: extractDir, todir: "drivers/"
@@ -162,9 +161,11 @@ void single(List<String> cucumberTags) {
 void lunchCucumberCli(List<String> cucumberTags) {
     println "Running the tests!!"
     List<String> cucumberArgs = []
-    cucumberArgs = ['--plugin', 'pretty', '--plugin', "json:${reporting.baseDir}/${selectedBrowser}.json",
-                    '--plugin', "html:${reporting.baseDir}/cucumber-html-report-1",
-                    '--glue', 'support', 'src/test/resources/features'
+    cucumberArgs = ['--plugin', 'pretty',
+                    '--plugin', "json:${reporting.baseDir}/cucumber.json",
+                    '--plugin', "junit:${reporting.baseDir}/cucumber.xml",
+                    '--plugin', "html:${reporting.baseDir}/Cucumber",
+                    '--glue', 'support', 'src/test/resources/features',
     ]
     cucumberArgs.addAll(cucumberTags)
     try {
@@ -172,7 +173,7 @@ void lunchCucumberCli(List<String> cucumberTags) {
             systemProperty getDriversProperty(), getDriversLocations()
             jvmArgs = ["-Dgeb.env=${selectedBrowser}"]
             main = "io.cucumber.core.cli.Main"
-            classpath = sourceSets.test.runtimeClasspath + sourceSets.main.runtimeClasspath
+            classpath = sourceSets.test.runtimeClasspath
             args = cucumberArgs
         }
     }

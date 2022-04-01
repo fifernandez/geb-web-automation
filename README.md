@@ -27,7 +27,7 @@ git clone https://github.com/fifernandez/basic-web-automation.git
 Navigate to the repo folder and run
 
 ```
-./gradlew build idea
+./gradlew clean build idea
 ```
 
 Run IntelliJ and before opening the project
@@ -43,11 +43,8 @@ Now lets open the project in IntelliJ
 ```
 Click on open, search for the project folder and click on ok.
 Wait for loading.
-Click on import gradle project and click on ok.
+Click on open and search for the folder gradle project and click on ok.
 Wait for loading.
-On the menu bar clin on view -> tool windows -> project
-folders : features and groovy must be marked as test sources root (green)
-folders: resources must be marked as test resources root (yellow icon)
 ```
 
 ## Running the tests
@@ -62,10 +59,10 @@ You can run specific scenarios if you add the tags parameter
 ./gradlew cucumber -Ptags="@Boca"
 ```
 
-You can run specific browser (firefox, chrome, safari, opera, phantomjs)
+You can run specific browser (firefox, chrome)
 
 ```
-./gradlew cucumber -Ptags="@Boca" -Penv=phantomjs
+./gradlew cucumber -Ptags="@Boca" -Penv=chrome
 ```
 
 ### And coding style tests
