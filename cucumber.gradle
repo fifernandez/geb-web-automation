@@ -8,13 +8,13 @@ buildscript {
     }
     dependencies {
         classpath "commons-io:commons-io:2.4"
-        classpath "net.masterthought:cucumber-reporting:5.5.4"
+        classpath "net.masterthought:cucumber-reporting:5.7.1"
     }
 }
 
 ext {
     geckoDriverVersion = '0.30.0'
-    chromeDriverVersion = '100.0.4896.60'
+    chromeDriverVersion = '102.0.5005.61'
     defaultBrowser = 'firefox'
     selectedBrowser = ''
     extractDir = ''
@@ -22,12 +22,11 @@ ext {
 
 void setBrowser() {
     if (selectedBrowser == '') {
-        if (project.hasProperty('env')) {
-            selectedBrowser = project.env
+        if (project.hasProperty('browser')) {
+            selectedBrowser = project.browser
         } else {
             selectedBrowser = defaultBrowser
             println "Environment not set!. Setting default to ${defaultBrowser}!"
-
         }
         println "Selected browser: ${selectedBrowser}!"
     }
@@ -51,6 +50,15 @@ String getDriversLocations() {
                 return "drivers/geckodriver"
             } else if (Os.isFamily(Os.FAMILY_UNIX)) {
                 return "drivers/geckodriver"
+            }
+            break
+        case "safari":
+            if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+                return "drivers/safaridriver"
+            } else if (Os.isFamily(Os.FAMILY_MAC)) {
+                return "/usr/bin/safaridriver"
+            } else if (Os.isFamily(Os.FAMILY_UNIX)) {
+                return "drivers/safaridriver"
             }
             break
     }
@@ -143,6 +151,9 @@ String getDriversProperty() {
         case "firefox":
             return 'webdriver.gecko.driver'
             break
+        case "safari":
+            return 'webdriver.safari.driver'
+            break
     }
 }
 
@@ -172,7 +183,7 @@ void lunchCucumberCli(List<String> cucumberTags) {
         javaexec {
             systemProperty getDriversProperty(), getDriversLocations()
             jvmArgs = ["-Dgeb.env=${selectedBrowser}"]
-            main = "io.cucumber.core.cli.Main"
+            mainClass = "io.cucumber.core.cli.Main"
             classpath = sourceSets.test.runtimeClasspath
             args = cucumberArgs
         }

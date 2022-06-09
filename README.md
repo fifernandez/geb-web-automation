@@ -62,7 +62,7 @@ You can run specific scenarios if you add the tags parameter
 You can run specific browser (firefox, chrome)
 
 ```
-./gradlew cucumber -Ptags="@Boca" -Penv=chrome
+./gradlew cucumber -Ptags="@Boca" -Pbrowser=chrome
 ```
 
 ### And coding style tests
