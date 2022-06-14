@@ -10,8 +10,7 @@ class BocaJuniorsPage extends Page {
     }
 
     static content = {
-        logo                                            { $(By.id('hplogo')) }
-
+        logo { $(By.id('hplogo')) }
     }
 
 }

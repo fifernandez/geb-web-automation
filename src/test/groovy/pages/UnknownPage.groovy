@@ -1,7 +1,6 @@
 package pages
 
 import geb.Page
-import org.openqa.selenium.By
 
 class UnknownPage extends Page {
 
@@ -10,8 +9,6 @@ class UnknownPage extends Page {
     }
 
     static content = {
-
-
     }
 
 }
