@@ -22,6 +22,6 @@ Feature: Google Search
     Then The title of the page must contain '<SiteTitle>'
 
     Examples:
-      | Team        | LinkText    | SiteTitle   |
-      | Barcelona   | Barcelona   | Barcelona   |
-      | Real Madrid | Real Madrid | Real Madrid |
+      | Team            | LinkText        | SiteTitle       |
+      | Manchester City | Manchester City | Manchester City |
+      | Real Madrid     | Real Madrid     | Real Madrid     |
