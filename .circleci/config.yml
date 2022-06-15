@@ -2,16 +2,11 @@ version: 2
 jobs:
   build:
     docker:
-      - image: cimg/openjdk:15.0-browsers
+      - image: selenium/standalone-chrome:latest
     environment:
         GRADLE_USER_HOME: .gradle-home
     steps:
-      - browser-tools/install-browser-tools
       - checkout
-      - run: |
-          node --version
-          java --version
-          google-chrome --version
       - restore_cache:
           keys:
             - gradle-home
