@@ -1,5 +1,7 @@
 # Basic Web Automation
 
+[![cucumber-test-runner-chrome](https://github.com/fifernandez/basic-web-automation/actions/workflows/cucumber-test-runner.yml/badge.svg)](https://github.com/fifernandez/basic-web-automation/actions/workflows/cucumber-test-runner.yml)
+
 The idea of this project is to help you start doing automation for web sites.
 
 ## Getting Started
