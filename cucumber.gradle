@@ -1,5 +1,4 @@
 import org.apache.commons.io.FileUtils
-import net.masterthought.cucumber.ReportBuilder
 import org.apache.tools.ant.taskdefs.condition.Os
 
 buildscript {
@@ -8,60 +7,81 @@ buildscript {
     }
     dependencies {
         classpath "commons-io:commons-io:2.4"
-        classpath "net.masterthought:cucumber-reporting:5.7.1"
     }
 }
 
 ext {
-    geckoDriverVersion = '0.30.0'
+    geckoDriverVersion = '0.31.0'
     chromeDriverVersion = '102.0.5005.61'
     defaultBrowser = 'firefox'
     selectedBrowser = ''
     extractDir = ''
+    driversProperty = ''
+    driversLocations = ''
 }
 
 void setBrowser() {
     if (selectedBrowser == '') {
-        if (project.hasProperty('browser')) {
-            selectedBrowser = project.browser
+        if (System.getProperty("browser") != null) {
+            selectedBrowser = System.getProperty("browser")
         } else {
             selectedBrowser = defaultBrowser
             println "Environment not set!. Setting default to ${defaultBrowser}!"
         }
         println "Selected browser: ${selectedBrowser}!"
     }
+    getDriversLocations()
+    getDriversProperty()
 }
 
-String getDriversLocations() {
+void getDriversProperty() {
+    String value = ''
+    switch (selectedBrowser) {
+        case "chrome":
+            value = 'webdriver.chrome.driver'
+            break
+        case "firefox":
+            value = 'webdriver.gecko.driver'
+            break
+        case "safari":
+            value = 'webdriver.safari.driver'
+            break
+    }
+    driversProperty = value
+}
+
+void getDriversLocations() {
+    String value = ''
     switch (selectedBrowser) {
         case "chrome":
             if (Os.isFamily(Os.FAMILY_WINDOWS)) {
-                return "drivers/chromedriver.exe"
+                value = "drivers/chromedriver.exe"
             } else if (Os.isFamily(Os.FAMILY_MAC)) {
-                return "drivers/chromedriver"
+                value = "drivers/chromedriver"
             } else if (Os.isFamily(Os.FAMILY_UNIX)) {
-                return "drivers/chromedriver"
+                value = "drivers/chromedriver"
             }
             break
         case "firefox":
             if (Os.isFamily(Os.FAMILY_WINDOWS)) {
-                return "drivers/geckodriver.exe"
+                value = "drivers/geckodriver.exe"
             } else if (Os.isFamily(Os.FAMILY_MAC)) {
-                return "drivers/geckodriver"
+                value = "drivers/geckodriver"
             } else if (Os.isFamily(Os.FAMILY_UNIX)) {
-                return "drivers/geckodriver"
+                value = "drivers/geckodriver"
             }
             break
         case "safari":
             if (Os.isFamily(Os.FAMILY_WINDOWS)) {
-                return "drivers/safaridriver"
+                value = "drivers/safaridriver"
             } else if (Os.isFamily(Os.FAMILY_MAC)) {
-                return "/usr/bin/safaridriver"
+                value = "/usr/bin/safaridriver"
             } else if (Os.isFamily(Os.FAMILY_UNIX)) {
-                return "drivers/safaridriver"
+                value = "drivers/safaridriver"
             }
             break
     }
+    driversLocations = value
 }
 
 task downloadGeckoDriver {
@@ -81,12 +101,13 @@ task downloadGeckoDriver {
         println "Getting driver from: ${driverURL}"
         FileUtils.copyURLToFile(new URL(driverURL), outputFile)
         println 'Done downloading.'
+        moveDriverFileToFolder()
     }
 }
 
 task getGeckoDriver(type: Copy) {
     setBrowser()
-    if ((selectedBrowser == 'firefox') && (!file(getDriversLocations()).exists())) {
+    if ((selectedBrowser == 'firefox') && (!file(driversLocations).exists())) {
         println "Downloading gecko v${geckoDriverVersion}driver..."
         def outputDir = file("drivers/")
         dependsOn downloadGeckoDriver
@@ -119,12 +140,13 @@ task downloadChromeDriver {
         println "Getting driver from: ${driverURL}"
         FileUtils.copyURLToFile(new URL(driverURL), outputFile)
         println 'Done downloading.'
+        moveDriverFileToFolder()
     }
 }
 
 task getChromeDriver(type: Copy) {
     setBrowser()
-    if (((selectedBrowser == 'chrome') && !file(getDriversLocations()).exists())) {
+    if (((selectedBrowser == 'chrome') && !file(driversLocations).exists())) {
         println "Downloading chrome v${chromeDriverVersion}  driver..."
         def outputDir = file("drivers/")
         dependsOn downloadChromeDriver
@@ -134,87 +156,9 @@ task getChromeDriver(type: Copy) {
     }
 }
 
-task cucumber {
-    dependsOn getGeckoDriver, getChromeDriver
-    doLast {
-        moveDriverFileToFolder()
-        List<String> cucumberTags = parseTags()
-        single(cucumberTags)
-    }
-}
-
-String getDriversProperty() {
-    switch (selectedBrowser) {
-        case "chrome":
-            return 'webdriver.chrome.driver'
-            break
-        case "firefox":
-            return 'webdriver.gecko.driver'
-            break
-        case "safari":
-            return 'webdriver.safari.driver'
-            break
-    }
-}
-
 void moveDriverFileToFolder() {
-    if (((selectedBrowser != '') && !file(getDriversLocations()).exists()) && (extractDir != '')) {
+    if (((selectedBrowser != '') && !file(driversLocations).exists()) && (extractDir != '')) {
         println "Moving the driver file!"
         ant.move file: extractDir, todir: "drivers/"
     }
-}
-
-void single(List<String> cucumberTags) {
-    lunchCucumberCli(cucumberTags)
-    generateReport()
-}
-
-void lunchCucumberCli(List<String> cucumberTags) {
-    println "Running the tests!!"
-    List<String> cucumberArgs = []
-    cucumberArgs = ['--plugin', 'pretty',
-                    '--plugin', "json:${reporting.baseDir}/cucumber.json",
-                    '--plugin', "junit:${reporting.baseDir}/cucumber.xml",
-                    '--plugin', "html:${reporting.baseDir}/Cucumber",
-                    '--glue', 'support', 'src/test/resources/features',
-    ]
-    cucumberArgs.addAll(cucumberTags)
-    try {
-        javaexec {
-            systemProperty getDriversProperty(), getDriversLocations()
-            jvmArgs = ["-Dgeb.env=${selectedBrowser}"]
-            mainClass = "io.cucumber.core.cli.Main"
-            classpath = sourceSets.test.runtimeClasspath
-            args = cucumberArgs
-        }
-    }
-    catch (Exception e) {
-    }
-}
-
-List<String> parseTags() {
-    List<String> result = []
-    if (project.hasProperty('tags')) {
-        result << '--tags '
-        result << project.tags
-    } else {
-        println "No tags. Running for all!"
-    }
-    result << '--tags '
-    result << 'not @ignore'
-    return result
-}
-
-def generateReport() {
-    println "Tests completed. Generating report...."
-    File reportOutputDirectory = new File("${reporting.baseDir}/")
-    def jsonReports = fileTree(dir: "${reporting.baseDir}/").include '**.json'.toString()
-    List<String> jsonReportFiles = new ArrayList<String>()
-    jsonReports.each { File file ->
-        jsonReportFiles.add("${reporting.baseDir}/${file.name}".toString())
-    }
-    String title = "Basic Web Automation Report"
-    net.masterthought.cucumber.Configuration configuration = new net.masterthought.cucumber.Configuration(reportOutputDirectory, title)
-    ReportBuilder reportBuilder = new ReportBuilder(jsonReportFiles, configuration)
-    reportBuilder.generateReports()
 }
