@@ -1,0 +1,23 @@
+{
+  "defaultEnvironment": "prod",
+  "defaultMode": "public",
+  "environments": [
+    "local",
+    "dev",
+    "qa",
+    "stage",
+    "prod"
+  ],
+  "baseUrls": {
+  },
+  "users": {
+    "pepe": {
+      "email": "pepe@gmail.com",
+      "password": "123456"
+    },
+    "john": {
+      "email": "john@gmail.com",
+      "password": "123456"
+    }
+  }
+}

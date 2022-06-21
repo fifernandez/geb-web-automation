@@ -1,23 +1,30 @@
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.chrome.ChromeDriverService
 import org.openqa.selenium.chrome.ChromeOptions
 import org.openqa.selenium.firefox.FirefoxDriver
 import org.openqa.selenium.firefox.FirefoxOptions
 import org.openqa.selenium.remote.DesiredCapabilities
 import org.openqa.selenium.remote.RemoteWebDriver
 import org.openqa.selenium.safari.SafariDriver
+import java.util.logging.Level
+import java.util.logging.Logger
+
+Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF)
 
 environments {
     chrome {
         driver = {
+            ChromeDriverService chromeDriverService = ChromeDriverService.createDefaultService()
+            chromeDriverService.sendOutputTo(new FileOutputStream("/dev/null"))
             DesiredCapabilities caps = new DesiredCapabilities()
             WebDriver driver
             if ((!isRemote()) && (!isHeadless())) {
-                driver = new ChromeDriver()
+                driver = new ChromeDriver(chromeDriverService)
             } else if (isHeadless()) {
                 ChromeOptions chromeOptions = new ChromeOptions()
                 chromeOptions.addArguments("--headless")
-                driver = new ChromeDriver(chromeOptions)
+                driver = new ChromeDriver(chromeDriverService, chromeOptions)
             } else {
                 caps.setCapability("os", "Windows")
                 caps.setCapability("os_version", "10")
@@ -33,13 +40,11 @@ environments {
     firefox {
         driver = {
             WebDriver driver
+            System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true")
+            System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null")
             if ((!isRemote()) && (!isHeadless())) {
-                System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true")
-                System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null")
                 driver = new FirefoxDriver()
             } else if (isHeadless()) {
-                System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true")
-                System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null")
                 FirefoxOptions firefoxOptions = new FirefoxOptions()
                 firefoxOptions.addArguments("--headless")
                 driver = new FirefoxDriver(firefoxOptions)

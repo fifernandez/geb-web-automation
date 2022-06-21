@@ -1,5 +1,6 @@
 import org.apache.commons.io.FileUtils
 import org.apache.tools.ant.taskdefs.condition.Os
+import groovy.json.JsonSlurper
 
 buildscript {
     repositories {
@@ -18,17 +19,45 @@ ext {
     extractDir = ''
     driversProperty = ''
     driversLocations = ''
+    cucumberTags = ''
+}
+
+task getTags() {
+    def jsonFile = file("src/test/java/config/config.json")
+    def parsedJson = new JsonSlurper().parseText(jsonFile.text)
+    String defaultEnvironment = parsedJson.defaultEnvironment
+    List<String> environments = parsedJson.environments
+    String selectedEnv = System.getProperty("env")
+    cucumberTags = ""
+    if (selectedEnv == null) {
+        println "Environment not sent. Going to use default: ${defaultEnvironment}"
+        cucumberTags = "@${defaultEnvironment}"
+    } else {
+        selectedEnv = selectedEnv.toLowerCase()
+        if (environments.contains(selectedEnv)) {
+            println "Selected env: ${selectedEnv}"
+            cucumberTags = "@${selectedEnv}"
+        } else {
+            println "Environment sent in parameter is not available. Sent: ${selectedEnv}"
+            println "Going to use default: ${defaultEnvironment}"
+            cucumberTags = "@${defaultEnvironment}"
+        }
+    }
+    cucumberTags += " and not @disable"
+    if (System.getProperty("tags") != null) {
+        cucumberTags = "(" + tags + ") and (" + System.getProperty("tags") + ")"
+    }
 }
 
 void setBrowser() {
     if (selectedBrowser == '') {
         if (System.getProperty("browser") != null) {
             selectedBrowser = System.getProperty("browser")
+            println "Selected browser: ${selectedBrowser}"
         } else {
             selectedBrowser = defaultBrowser
-            println "Environment not set!. Setting default to ${defaultBrowser}!"
+            println "Browser not sent. Going to user default: ${defaultBrowser}!"
         }
-        println "Selected browser: ${selectedBrowser}!"
     }
     getDriversLocations()
     getDriversProperty()
