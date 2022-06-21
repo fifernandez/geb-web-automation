@@ -1,5 +1,6 @@
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 
+
 plugins {
     id 'idea'
     id 'groovy'
@@ -28,7 +29,7 @@ dependencies {
 }
 
 test {
-    dependsOn assemble, testClasses, getGeckoDriver, getChromeDriver
+    dependsOn assemble, testClasses, getGeckoDriver, getChromeDriver, getTags
     finalizedBy generateCucumberReports
     systemProperty driversProperty, driversLocations
     if (System.getProperty("browser") != null) {
@@ -37,13 +38,14 @@ test {
     if (System.getProperty("browser.option") != null) {
         systemProperty "browser.option", System.getProperty("browser.option")
     }
+    systemProperty "cucumber.filter.tags", cucumberTags
     useJUnitPlatform()
     systemProperty("cucumber.junit-platform.naming-strategy", "long")
     testLogging {
         events TestLogEvent.FAILED, TestLogEvent.PASSED, TestLogEvent.SKIPPED
     }
     systemProperties(project.gradle.startParameter.systemPropertiesArgs)
-    ignoreFailures = true
+    //ignoreFailures = true
 }
 
 cucumberReports {
@@ -60,8 +62,33 @@ configurations {
     }
 }
 
+cucumber {
+    main = 'io.cucumber.core.cli.Main'
+    glue = 'support'
+    tags = cucumberTags
+    plugin = [
+            "pretty",
+            "json:build/reports/cucumber.json",
+            "junit:build/reports/cucumber.xml",
+            "html:build/reports/cucumber-report.html",
+            "rerun:build/reports/rerun.txt",
+    ]
+}
+
+tasks.cucumber {
+    dependsOn getGeckoDriver, getChromeDriver, getTags
+    finalizedBy generateCucumberReports
+    System.setProperty(driversProperty, driversLocations)
+    if (System.getProperty("browser") != null) {
+        System.setProperty("geb.env", System.getProperty("browser"))
+    }
+    if (System.getProperty("browser.option") != null) {
+        System.setProperty("browser.option", System.getProperty("browser.option"))
+    }
+}
+
 task runTests() {
-    dependsOn assemble, testClasses, getGeckoDriver, getChromeDriver
+    dependsOn assemble, testClasses, getGeckoDriver, getChromeDriver, getTags
     finalizedBy generateCucumberReports
     doLast {
         javaexec {
@@ -73,9 +100,7 @@ task runTests() {
             if (System.getProperty("browser.option") != null) {
                 systemProperty "browser.option", System.getProperty("browser.option")
             }
-            if (System.getProperty("cucumber.filter.tags") != null) {
-                systemProperty "cucumber.filter.tags", System.getProperty("cucumber.filter.tags")
-            }
+            systemProperty "cucumber.filter.tags", cucumberTags
             systemProperty driversProperty, driversLocations
             args = [
                     '--plugin', 'pretty',
@@ -87,19 +112,7 @@ task runTests() {
                     '--glue', "support"
             ]
             jvmArgs = ["-Dgeb.env=${selectedBrowser}"]
-            ignoreExitValue = true
+            //ignoreExitValue = true
         }
     }
-}
-
-cucumber {
-    main = 'io.cucumber.core.cli.Main'
-    //threads = '1'
-    plugin = [
-            "pretty",
-            "json:build/reports/cucumber.json",
-            "junit:build/reports/cucumber.xml",
-            "rerun:build/reports/rerun.txt",
-            "html:build/reports/cucumber-report.html"
-    ]
 }

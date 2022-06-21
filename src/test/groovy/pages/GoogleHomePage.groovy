@@ -4,7 +4,7 @@ import geb.Page
 import org.openqa.selenium.By
 
 class GoogleHomePage extends Page {
-    static url = "http://www.google.com.ar"
+    static url = "http://www.google.com"
 
     static at = {
         waitFor { logo.isDisplayed() }

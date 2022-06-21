@@ -2,6 +2,8 @@
 
 Feature: Google Search
 
+
+  @prod
   @Boca
   Scenario: Search only For Boca Juniors
     Given I go to the 'Google Home' page
