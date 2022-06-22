@@ -1,6 +1,5 @@
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 
-
 plugins {
     id 'idea'
     id 'groovy'
@@ -37,6 +36,9 @@ test {
     }
     if (System.getProperty("browser.option") != null) {
         systemProperty "browser.option", System.getProperty("browser.option")
+    }
+    if (System.getProperty("env") != null) {
+        systemProperty "env", System.getProperty("env")
     }
     systemProperty "cucumber.filter.tags", cucumberTags
     useJUnitPlatform()
@@ -85,6 +87,9 @@ tasks.cucumber {
     if (System.getProperty("browser.option") != null) {
         System.setProperty("browser.option", System.getProperty("browser.option"))
     }
+    if (System.getProperty("env") != null) {
+        System.setProperty("env", System.getProperty("env"))
+    }
 }
 
 task runTests() {
@@ -99,6 +104,9 @@ task runTests() {
             }
             if (System.getProperty("browser.option") != null) {
                 systemProperty "browser.option", System.getProperty("browser.option")
+            }
+            if (System.getProperty("env") != null) {
+                systemProperty "env", System.getProperty("env")
             }
             systemProperty "cucumber.filter.tags", cucumberTags
             systemProperty driversProperty, driversLocations

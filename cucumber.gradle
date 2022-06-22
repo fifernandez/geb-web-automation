@@ -23,23 +23,19 @@ ext {
 }
 
 task getTags() {
-    def jsonFile = file("src/test/java/config/config.json")
+    def jsonFile = file("src/test/groovy/config/config.json")
     def parsedJson = new JsonSlurper().parseText(jsonFile.text)
     String defaultEnvironment = parsedJson.defaultEnvironment
     List<String> environments = parsedJson.environments
     String selectedEnv = System.getProperty("env")
     cucumberTags = ""
     if (selectedEnv == null) {
-        println "Environment not sent. Going to use default: ${defaultEnvironment}"
         cucumberTags = "@${defaultEnvironment}"
     } else {
         selectedEnv = selectedEnv.toLowerCase()
         if (environments.contains(selectedEnv)) {
-            println "Selected env: ${selectedEnv}"
             cucumberTags = "@${selectedEnv}"
         } else {
-            println "Environment sent in parameter is not available. Sent: ${selectedEnv}"
-            println "Going to use default: ${defaultEnvironment}"
             cucumberTags = "@${defaultEnvironment}"
         }
     }

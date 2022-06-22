@@ -1,3 +1,4 @@
+import config.Configuration
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.chrome.ChromeDriverService
@@ -7,10 +8,13 @@ import org.openqa.selenium.firefox.FirefoxOptions
 import org.openqa.selenium.remote.DesiredCapabilities
 import org.openqa.selenium.remote.RemoteWebDriver
 import org.openqa.selenium.safari.SafariDriver
+import support.Environment
 import java.util.logging.Level
 import java.util.logging.Logger
 
 Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF)
+Configuration.loadAllConfigs()
+Environment.getEnvironment()
 
 environments {
     chrome {
