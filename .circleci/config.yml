@@ -20,4 +20,4 @@ jobs:
           paths:
             - .gradle-home
       - store_test_results:
-          path: build/reports/cucumber.xml      
+          path: build/reports/     
