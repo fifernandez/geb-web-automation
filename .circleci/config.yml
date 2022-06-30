@@ -19,3 +19,5 @@ jobs:
           key: gradle-home
           paths:
             - .gradle-home
+      - store_test_results:
+          path: build/reports/cucumber.xml      
