@@ -2,6 +2,7 @@ build/
 out/
 drivers/
 .gradle/
+.allure/
 .idea/
 *.iml
 *.ipr

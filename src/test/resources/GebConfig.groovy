@@ -22,11 +22,12 @@ environments {
             ChromeDriverService chromeDriverService = ChromeDriverService.createDefaultService()
             chromeDriverService.sendOutputTo(new FileOutputStream("/dev/null"))
             DesiredCapabilities caps = new DesiredCapabilities()
+            ChromeOptions chromeOptions = new ChromeOptions()
+            chromeOptions.addArguments("--disable-notifications")
             WebDriver driver
             if ((!isRemote()) && (!isHeadless())) {
-                driver = new ChromeDriver(chromeDriverService)
+                driver = new ChromeDriver(chromeDriverService, chromeOptions)
             } else if (isHeadless()) {
-                ChromeOptions chromeOptions = new ChromeOptions()
                 chromeOptions.addArguments("--headless")
                 driver = new ChromeDriver(chromeDriverService, chromeOptions)
             } else {

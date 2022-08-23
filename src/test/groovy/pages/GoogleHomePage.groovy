@@ -11,7 +11,7 @@ class GoogleHomePage extends Page {
     }
 
     static content = {
-        logo { $('img', 'alt': 'Google') }
+        logo { $('img', class: 'lnXdpd') }
         searchText { $(By.name('q')) }
         searchButton(to: GoogleResultsPage) { $('input', 'title': 'Search') }
     }
