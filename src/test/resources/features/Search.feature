@@ -3,7 +3,7 @@
 Feature: Google Search
 
 
-  @prod
+  @smoke @regression @prod
   @Boca
   Scenario: Search only For Boca Juniors
     Given I go to the 'Google Home' page
@@ -14,7 +14,8 @@ Feature: Google Search
     Then The title of the page must contain 'Boca'
 
 
-  @Others
+  @regression @prod
+    @Others
   Scenario Outline: Search for Other Teams
     Given I go to the 'Google Home' page
     And On the 'Google Home' page, in the 'Search Text' I type: '<Team>'
@@ -27,3 +28,18 @@ Feature: Google Search
       | Team            | LinkText        | SiteTitle       |
       | Manchester City | Manchester City | Manchester City |
       | Real Madrid     | Real Madrid     | Real Madrid     |
+
+
+  @regression @prod
+    @failing
+  Scenario Outline: Just a failing test
+    Given I go to the 'Google Home' page
+    And On the 'Google Home' page, in the 'Search Text' I type: '<Team>'
+    And On the 'Google Home' page, I click on: 'Search Button'
+    Then The first result must contain the text '<LinkText>'
+    And On the 'Results' page, I click on: 'The first result'
+    Then The title of the page must contain '<SiteTitle>'
+
+    Examples:
+      | Team            | LinkText        | SiteTitle   |
+      | Manchester City | Manchester City | Real Madrid |

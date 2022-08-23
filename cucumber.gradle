@@ -1,6 +1,5 @@
 import org.apache.commons.io.FileUtils
 import org.apache.tools.ant.taskdefs.condition.Os
-import groovy.json.JsonSlurper
 
 buildscript {
     repositories {
@@ -13,36 +12,12 @@ buildscript {
 
 ext {
     geckoDriverVersion = '0.31.0'
-    chromeDriverVersion = '102.0.5005.61'
+    chromeDriverVersion = '104.0.5112.79'
     defaultBrowser = 'firefox'
     selectedBrowser = ''
     extractDir = ''
     driversProperty = ''
     driversLocations = ''
-    cucumberTags = ''
-}
-
-task getTags() {
-    def jsonFile = file("src/test/groovy/config/config.json")
-    def parsedJson = new JsonSlurper().parseText(jsonFile.text)
-    String defaultEnvironment = parsedJson.defaultEnvironment
-    List<String> environments = parsedJson.environments
-    String selectedEnv = System.getProperty("env")
-    cucumberTags = ""
-    if (selectedEnv == null) {
-        cucumberTags = "@${defaultEnvironment}"
-    } else {
-        selectedEnv = selectedEnv.toLowerCase()
-        if (environments.contains(selectedEnv)) {
-            cucumberTags = "@${selectedEnv}"
-        } else {
-            cucumberTags = "@${defaultEnvironment}"
-        }
-    }
-    cucumberTags += " and not @disable"
-    if (System.getProperty("tags") != null) {
-        cucumberTags = "(" + tags + ") and (" + System.getProperty("tags") + ")"
-    }
 }
 
 void setBrowser() {

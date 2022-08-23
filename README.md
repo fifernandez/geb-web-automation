@@ -1,108 +1,51 @@
 # Basic Web Automation
 
-[![cucumber-test-runner-chrome](https://github.com/fifernandez/basic-web-automation/actions/workflows/cucumber-test-runner.yml/badge.svg)](https://github.com/fifernandez/basic-web-automation/actions/workflows/cucumber-test-runner.yml)
-
 [![CircleCI](https://circleci.com/gh/fifernandez/basic-web-automation/tree/master.svg?style=svg)](https://circleci.com/gh/fifernandez/basic-web-automation/tree/master)
 
-The idea of this project is to help you start doing automation for web sites.
+Web Automation using Geb, Groovy, Cucumber, Gradle and Allure reports.
 
-## Getting Started
+| Job        | Status                                                                                                                                                                                                                  | Report                                                                                                                                                                               |
+|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Smoke      | [![Smoke Tests](https://github.com/fifernandez/basic-web-automation/actions/workflows/smoke-tests.yml/badge.svg)](https://github.com/fifernandez/basic-web-automation/actions/workflows/smoke-tests.yml)                | [<img src="https://avatars.githubusercontent.com/u/5879127?s=200&v=4" width="15" alt="Allure Report"/> Allure Report](https://fifernandez.github.io/basic-web-automation/smoke)      |
+| Regression | [![Regression Tests](https://github.com/fifernandez/basic-web-automation/actions/workflows/regression-tests.yml/badge.svg)](https://github.com/fifernandez/basic-web-automation/actions/workflows/regression-tests.yml) | [<img src="https://avatars.githubusercontent.com/u/5879127?s=200&v=4" width="15" alt="Allure Report"/> Allure Report](https://fifernandez.github.io/basic-web-automation/regression) |
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+To run the tests:
+-
+Option 1:
 
-### Prerequisites
-Things you need to install
-*  [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  with JAVA_HOME environment variable configured.
-    * [Windows](https://stackoverflow.com/questions/2619584/how-to-set-java-home-on-windows-7/)
-    * [Linux](https://stackoverflow.com/questions/24641536/how-to-set-java-home-in-linux-for-all-users)
-    * [Mac](https://stackoverflow.com/questions/1348842/what-should-i-set-java-home-to-on-osx)
-*  Mozilla Firefox [(47.0.2)](https://ftp.mozilla.org/pub/firefox/releases/47.0.2/)
-*  Gitbash [(Only if using windows)](https://git-for-windows.github.io/)
-* IntelliJ IDEA [(Community Version)](https://www.jetbrains.com/idea/download)
+- Execute:  ./gradlew test
+- Low console output, just the names of the scenarios and the result.
 
-### Installing
+Option 2:
 
-Clone this repo:
+- Execute: ./gradlew cucumber
+- Will display all the scenarios in the console output while running along the errors.
 
-```
-git clone https://github.com/fifernandez/basic-web-automation.git
-```
+Option 3:
 
-Navigate to the repo folder and run
+- Execute: ./gradlew runTests
+- Will display all the scenarios in the console output while running along the errors.
 
-```
-./gradlew clean build idea
-```
+Parameters:
 
-Run IntelliJ and before opening the project
-```
-click on configure -> project defaults -> project structure.
-Inside project sdk click on new and search the folder where you installed java sdk, and click on Ok.
-Now go to configure -> plugins -> install jetbrains plugins.
-Search cucumber for groovy and isntall it with all the other required plugins that intellij informs.
-Close and restart when prompted.
-```
+- Browser:
+    - You can choose the browser you want to use.
+    - Add to command line: -Dbrowser=desired
+    - Available: chrome, firefox, safari
+    - Default: firefox
 
-Now lets open the project in IntelliJ
-```
-Click on open, search for the project folder and click on ok.
-Wait for loading.
-Click on open and search for the folder gradle project and click on ok.
-Wait for loading.
-```
+- Browser Option:
+    - You can choose to run the browser in headless mode.
+    - Add to command line: -Dbrowser.option=headless
+    - If not added, browser will run normally.
 
-## Running the tests
-Inside the project folder run:
-```
-./gradlew cucumber
-```
 
-You can run specific scenarios if you add the tags parameter
-
-```
-./gradlew cucumber -Ptags="@Boca"
-```
-
-You can run specific browser (firefox, chrome)
-
-```
-./gradlew cucumber -Ptags="@Boca" -Pbrowser=chrome
-```
-
-### And coding style tests
-
-* Write the features in the features folder
-    * Assign tags to them
-    * You can parametrize the scenario using 'Scenario Outline'
-* Define your steps in the steps folder
-   * Parametrize buttons, fields, inputs so you can easily reuse steps
-   * Keep good organization of the files, it' a good idea to have one step file per page
-* Create your pages/modules files in the groovy folder
-    * Make a good use of the [Page Object pattern](http://docs.seleniumhq.org/docs/06_test_design_considerations.jsp#page-object-design-pattern)
-* To config your drivers edit: GebConfig.groovy 
-* For changing cucumber configs edit: env.groovy
-
-## Built With
-
-* [Cucumber](https://cucumber.io/) - For writing the tests scenarios
-* [Geb](http://www.gebish.org/) - For the browser automation
-* [Groovy](http://groovy-lang.org/) - For writing the steps implementations
-* [Gradle](https://gradle.org/) - For building and running
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Authors
-
-* **Fran Fernandez** - [fifernandez](https://github.com/fifernandez)
-
-See also the list of [contributors](https://github.com/fifernandez/basic-web-automation) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-*
+- Tags:
+    - You can choose which scenarios you want to run.
+        - Add to command: -tags="desired"
+        - Remember each scenario starts with @
+        - You can use "and", "or", "not" operators and also "(" or ")".
+        - Example: -Dtags="@2 and not @3"
+        - A tag for the environment will be automatically added, so only scenarios that have the selected environment
+          tag will run.
+        - You can disable tests adding the tag @disable.
