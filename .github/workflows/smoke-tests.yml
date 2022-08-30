@@ -1,6 +1,10 @@
 name: Smoke Tests - Chrome
 
-on: [ push, workflow_dispatch ]
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 3 * * *'
 
 jobs:
   Run_Smoke_Tests:
