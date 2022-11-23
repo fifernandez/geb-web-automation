@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"skipped","Wed Nov 23 02:53:46 GMT 2022","Wed Nov 23 02:53:46 GMT 2022","874","","Google Search","","Search for Other Teams","","Search for Other Teams",""
+"skipped","Wed Nov 23 02:53:44 GMT 2022","Wed Nov 23 02:53:46 GMT 2022","1057","","Google Search","","Search for Other Teams","","Search for Other Teams",""
+"skipped","Wed Nov 23 02:53:42 GMT 2022","Wed Nov 23 02:53:44 GMT 2022","2118","","Google Search","","Search only For Boca Juniors","","Search only For Boca Juniors",""
+"skipped","Wed Nov 23 02:53:46 GMT 2022","Wed Nov 23 02:53:47 GMT 2022","974","","Google Search","","Just a failing test","","Just a failing test",""
