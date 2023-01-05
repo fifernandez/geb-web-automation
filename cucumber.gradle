@@ -12,7 +12,7 @@ buildscript {
 
 ext {
     geckoDriverVersion = '0.31.0'
-    chromeDriverVersion = '104.0.5112.79'
+    chromeDriverVersion = '108.0.5359.71'
     defaultBrowser = 'firefox'
     selectedBrowser = ''
     extractDir = ''
