@@ -1,0 +1,4 @@
+"Epic","Feature","Story","FAILED","BROKEN","PASSED","SKIPPED","UNKNOWN"
+"","Google Search","Just a failing test","1","0","0","0","0"
+"","Google Search","Search only For Boca Juniors","0","0","1","0","0"
+"","Google Search","Search for Other Teams","0","0","2","0","0"
