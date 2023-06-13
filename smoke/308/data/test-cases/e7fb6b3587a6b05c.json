@@ -1,0 +1,76 @@
+{
+  "uid" : "e7fb6b3587a6b05c",
+  "name" : "Search only For Boca Juniors",
+  "fullName" : "Google Search.Search only For Boca Juniors",
+  "historyId" : "1d47f25546cdac5c1803861a6d0ef016",
+  "time" : {
+    "start" : 1686669871679,
+    "stop" : 1686669884906,
+    "duration" : 13227
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : ""
+  }, {
+    "name" : "testClass",
+    "value" : "Google Search"
+  }, {
+    "name" : "testMethod",
+    "value" : "Search only For Boca Juniors"
+  }, {
+    "name" : "suite",
+    "value" : "Google Search"
+  }, {
+    "name" : "host",
+    "value" : "fv-az436-899"
+  }, {
+    "name" : "thread",
+    "value" : "2327@fv-az436-899.Test worker(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "9156a185e923bd4c",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/307//#testresult/9156a185e923bd4c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1686669740109,
+          "stop" : 1686669754679,
+          "duration" : 14570
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "e7fb6b3587a6b05c.json",
+  "parameterValues" : [ ]
+}
