@@ -1,7 +1,5 @@
 # Basic Web Automation
 
-[![CircleCI](https://circleci.com/gh/fifernandez/basic-web-automation/tree/master.svg?style=svg)](https://circleci.com/gh/fifernandez/basic-web-automation/tree/master)
-
 Web Automation using Geb, Groovy, Cucumber, Gradle and Allure reports.
 
 | Job        | Status                                                                                                                                                                                                                  | Report                                                                                                                                                                               |

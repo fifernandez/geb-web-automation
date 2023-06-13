@@ -1,7 +1,6 @@
 import config.Configuration
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
-import org.openqa.selenium.chrome.ChromeDriverService
 import org.openqa.selenium.chrome.ChromeOptions
 import org.openqa.selenium.firefox.FirefoxDriver
 import org.openqa.selenium.firefox.FirefoxOptions
@@ -17,19 +16,18 @@ Configuration.loadAllConfigs()
 Environment.getEnvironment()
 
 environments {
+
     chrome {
         driver = {
-            ChromeDriverService chromeDriverService = ChromeDriverService.createDefaultService()
-            chromeDriverService.sendOutputTo(new FileOutputStream("/dev/null"))
             DesiredCapabilities caps = new DesiredCapabilities()
             ChromeOptions chromeOptions = new ChromeOptions()
             chromeOptions.addArguments("--disable-notifications")
             WebDriver driver
             if ((!isRemote()) && (!isHeadless())) {
-                driver = new ChromeDriver(chromeDriverService, chromeOptions)
+                driver = new ChromeDriver(chromeOptions)
             } else if (isHeadless()) {
                 chromeOptions.addArguments("--headless")
-                driver = new ChromeDriver(chromeDriverService, chromeOptions)
+                driver = new ChromeDriver(chromeOptions)
             } else {
                 caps.setCapability("os", "Windows")
                 caps.setCapability("os_version", "10")
@@ -45,8 +43,6 @@ environments {
     firefox {
         driver = {
             WebDriver driver
-            System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true")
-            System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null")
             if ((!isRemote()) && (!isHeadless())) {
                 driver = new FirefoxDriver()
             } else if (isHeadless()) {
@@ -109,7 +105,7 @@ waiting {
     includeCauseInMessage = true
 }
 
-boolean isRemote() {
+static boolean isRemote() {
     String option = System.getProperty('browser.option')
     if ((option == null) || (option != 'remote')) {
         return false
@@ -118,7 +114,7 @@ boolean isRemote() {
     }
 }
 
-boolean isHeadless() {
+static boolean isHeadless() {
     String option = System.getProperty('browser.option')
     if ((option == null) || (option != 'headless')) {
         return false
@@ -127,11 +123,11 @@ boolean isHeadless() {
     }
 }
 
-void configsForAll(WebDriver driver) {
+static void configsForAll(WebDriver driver) {
     driver.manage().window().maximize()
 }
 
-WebDriver buildRemoteDriver(DesiredCapabilities caps) {
+static WebDriver buildRemoteDriver(DesiredCapabilities caps) {
     String user = ''
     String key = ''
     String url = "https://${user}:${key}@hub.browserstack.com/wd/hub"
