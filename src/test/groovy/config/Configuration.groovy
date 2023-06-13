@@ -5,7 +5,7 @@ import org.junit.Assert
 import support.Environment
 
 class Configuration {
-    static final String configFile = "src/test/groovy/config/config.json";
+    static final String configFile = "src/test/groovy/config/config.json"
 
     static boolean loadEnvironments() {
         def jsonFile = new File(configFile)
@@ -23,7 +23,7 @@ class Configuration {
     }
 
     static void loadAllConfigs() {
-        Assert.assertTrue("Failed to load environments values from file.", loadEnvironments());
+        Assert.assertTrue("Failed to load environments values from file.", loadEnvironments())
     }
 
     static void main(String[] args) {
