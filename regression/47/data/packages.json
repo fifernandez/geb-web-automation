@@ -1,0 +1,117 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "",
+    "children" : [ {
+      "name" : "Search only For Boca Juniors",
+      "uid" : "f52dd2c446b299a4",
+      "parentUid" : "be5e18e41bf32fca5cace70290d883bb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1686669894006,
+        "stop" : 1686669914373,
+        "duration" : 20367
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Search for Other Teams #1",
+      "uid" : "d3fd77404510c031",
+      "parentUid" : "be5e18e41bf32fca5cace70290d883bb",
+      "status" : "failed",
+      "time" : {
+        "start" : 1686669914377,
+        "stop" : 1686669922066,
+        "duration" : 7689
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Search for Other Teams #2",
+      "uid" : "6d980aa7da525a1f",
+      "parentUid" : "be5e18e41bf32fca5cace70290d883bb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1686669922068,
+        "stop" : 1686669928322,
+        "duration" : 6254
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Just a failing test",
+      "uid" : "1e2eece0e07a8107",
+      "parentUid" : "be5e18e41bf32fca5cace70290d883bb",
+      "status" : "failed",
+      "time" : {
+        "start" : 1686669928324,
+        "stop" : 1686669935095,
+        "duration" : 6771
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "be5e18e41bf32fca5cace70290d883bb"
+  }, {
+    "name" : "src.test.resources.features.Search_feature.Google Search",
+    "children" : [ {
+      "name" : "Search only For Boca Juniors",
+      "uid" : "7ff784a0345a946e",
+      "parentUid" : "7747a2ad08ac223c1349a986951bb023",
+      "status" : "passed",
+      "time" : {
+        "start" : 1686669894134,
+        "stop" : 1686669914284,
+        "duration" : 20150
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Search for Other Teams",
+      "uid" : "e682f33e144bad9c",
+      "parentUid" : "7747a2ad08ac223c1349a986951bb023",
+      "status" : "failed",
+      "time" : {
+        "start" : 1686669914389,
+        "stop" : 1686669922063,
+        "duration" : 7674
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Manchester City", "Manchester City", "Manchester City" ]
+    }, {
+      "name" : "Search for Other Teams",
+      "uid" : "b70a06329368beb9",
+      "parentUid" : "7747a2ad08ac223c1349a986951bb023",
+      "status" : "passed",
+      "time" : {
+        "start" : 1686669922072,
+        "stop" : 1686669928314,
+        "duration" : 6242
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Real Madrid", "Real Madrid", "Real Madrid" ]
+    }, {
+      "name" : "Just a failing test",
+      "uid" : "3482bb33fbfe9cb6",
+      "parentUid" : "7747a2ad08ac223c1349a986951bb023",
+      "status" : "failed",
+      "time" : {
+        "start" : 1686669928332,
+        "stop" : 1686669935093,
+        "duration" : 6761
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Manchester City", "Real Madrid", "Manchester City" ]
+    } ],
+    "uid" : "src.test.resources.features.Search_feature.Google Search"
+  } ],
+  "name" : "packages"
+}
