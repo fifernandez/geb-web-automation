@@ -1,0 +1,76 @@
+{
+  "uid" : "4091927a3ef9a085",
+  "name" : "Search for Other Teams #2",
+  "fullName" : "Google Search.Search for Other Teams #2",
+  "historyId" : "dc89c3582314414e37f5832d3aba616a",
+  "time" : {
+    "start" : 1686709920048,
+    "stop" : 1686709929833,
+    "duration" : 9785
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : ""
+  }, {
+    "name" : "testClass",
+    "value" : "Google Search"
+  }, {
+    "name" : "testMethod",
+    "value" : "Search for Other Teams #2"
+  }, {
+    "name" : "suite",
+    "value" : "Google Search"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1125-40"
+  }, {
+    "name" : "thread",
+    "value" : "2339@fv-az1125-40.Test worker(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "6d980aa7da525a1f",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/47//#testresult/6d980aa7da525a1f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1686669922068,
+          "stop" : 1686669928322,
+          "duration" : 6254
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "4091927a3ef9a085.json",
+  "parameterValues" : [ ]
+}

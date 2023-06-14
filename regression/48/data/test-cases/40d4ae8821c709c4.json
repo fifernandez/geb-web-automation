@@ -1,0 +1,250 @@
+{
+  "uid" : "40d4ae8821c709c4",
+  "name" : "Search for Other Teams",
+  "fullName" : "Google Search: Search for Other Teams",
+  "historyId" : "66f6143bd7d64c602acc59b9da1e700a",
+  "time" : {
+    "start" : 1686709912294,
+    "stop" : 1686709920005,
+    "duration" : 7711
+  },
+  "status" : "failed",
+  "statusMessage" : "assert page.title.toLowerCase().contains(correct.toLowerCase())\n       |    |     |             |        |       |\n       |    |     |             false    |       'manchester city'\n       |    |     |                      'Manchester City'\n       |    |     'page not found • instagram'\n       |    'Page not found • Instagram'\n       pages.UnknownPage",
+  "statusTrace" : "Assertion failed: \n\nassert page.title.toLowerCase().contains(correct.toLowerCase())\n       |    |     |             |        |       |\n       |    |     |             false    |       'manchester city'\n       |    |     |                      'Manchester City'\n       |    |     'page not found • instagram'\n       |    'Page not found • Instagram'\n       pages.UnknownPage\n\n\tat org.codehaus.groovy.runtime.InvokerHelper.assertFailed(InvokerHelper.java:407)\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.assertFailed(ScriptBytecodeAdapter.java:708)\n\tat support.steps.steps$_run_closure2.doCall(steps.groovy:17)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)\n\tat org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:279)\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)\n\tat groovy.lang.Closure.call(Closure.java:418)\n\tat io.cucumber.groovy.Invoker.invoke(Invoker.java:19)\n\tat io.cucumber.groovy.GroovyStepDefinition.execute(GroovyStepDefinition.java:27)\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:56)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:84)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:75)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)\n\tat io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:130)\n\tat io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)\n\tat io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:130)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunBeforeAllHooks.evaluate(Cucumber.java:266)\n\tat io.cucumber.junit.Cucumber$RunAfterAllHooks.evaluate(Cucumber.java:281)\n\tat io.cucumber.junit.Cucumber$StartTestRun.evaluate(Cucumber.java:233)\n\tat io.cucumber.junit.Cucumber$FinishTestRun.evaluate(Cucumber.java:248)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)\n\tat org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)\n\tat org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)\n\tat org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)\n\tat org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)\n\tat org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)\n\tat org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)\n\tat jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)\n\tat org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)\n\tat org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)\n\tat org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)\n\tat worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)\n\tat worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "env.groovy:15",
+    "time" : {
+      "start" : 1686709912295,
+      "stop" : 1686709912681,
+      "duration" : 386
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "assert page.title.toLowerCase().contains(correct.toLowerCase())\n       |    |     |             |        |       |\n       |    |     |             false    |       'manchester city'\n       |    |     |                      'Manchester City'\n       |    |     'page not found • instagram'\n       |    'Page not found • Instagram'\n       pages.UnknownPage",
+    "statusTrace" : "Assertion failed: \n\nassert page.title.toLowerCase().contains(correct.toLowerCase())\n       |    |     |             |        |       |\n       |    |     |             false    |       'manchester city'\n       |    |     |                      'Manchester City'\n       |    |     'page not found • instagram'\n       |    'Page not found • Instagram'\n       pages.UnknownPage\n\n\tat org.codehaus.groovy.runtime.InvokerHelper.assertFailed(InvokerHelper.java:407)\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.assertFailed(ScriptBytecodeAdapter.java:708)\n\tat support.steps.steps$_run_closure2.doCall(steps.groovy:17)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)\n\tat org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:279)\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)\n\tat groovy.lang.Closure.call(Closure.java:418)\n\tat io.cucumber.groovy.Invoker.invoke(Invoker.java:19)\n\tat io.cucumber.groovy.GroovyStepDefinition.execute(GroovyStepDefinition.java:27)\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:56)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:84)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:75)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)\n\tat io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:130)\n\tat io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)\n\tat io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:130)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunBeforeAllHooks.evaluate(Cucumber.java:266)\n\tat io.cucumber.junit.Cucumber$RunAfterAllHooks.evaluate(Cucumber.java:281)\n\tat io.cucumber.junit.Cucumber$StartTestRun.evaluate(Cucumber.java:233)\n\tat io.cucumber.junit.Cucumber$FinishTestRun.evaluate(Cucumber.java:248)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)\n\tat org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)\n\tat org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)\n\tat org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)\n\tat org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)\n\tat org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)\n\tat org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)\n\tat jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)\n\tat org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)\n\tat org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)\n\tat org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)\n\tat worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)\n\tat worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)\n",
+    "steps" : [ {
+      "name" : "Given  I go to the 'Google Home' page",
+      "time" : {
+        "start" : 1686709912682,
+        "stop" : 1686709913619,
+        "duration" : 937
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "And  On the 'Google Home' page, in the 'Search Text' I type: 'Manchester City'",
+      "time" : {
+        "start" : 1686709913619,
+        "stop" : 1686709913946,
+        "duration" : 327
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "And  On the 'Google Home' page, I click on: 'Search Button'",
+      "time" : {
+        "start" : 1686709913947,
+        "stop" : 1686709916145,
+        "duration" : 2198
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Then  The first result must contain the text 'Manchester City'",
+      "time" : {
+        "start" : 1686709916145,
+        "stop" : 1686709916342,
+        "duration" : 197
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "And  On the 'Results' page, I click on: 'The first result'",
+      "time" : {
+        "start" : 1686709916343,
+        "stop" : 1686709919571,
+        "duration" : 3228
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Then  The title of the page must contain 'Manchester City'",
+      "time" : {
+        "start" : 1686709919571,
+        "stop" : 1686709919690,
+        "duration" : 119
+      },
+      "status" : "failed",
+      "statusMessage" : "assert page.title.toLowerCase().contains(correct.toLowerCase())\n       |    |     |             |        |       |\n       |    |     |             false    |       'manchester city'\n       |    |     |                      'Manchester City'\n       |    |     'page not found • instagram'\n       |    'Page not found • Instagram'\n       pages.UnknownPage",
+      "statusTrace" : "Assertion failed: \n\nassert page.title.toLowerCase().contains(correct.toLowerCase())\n       |    |     |             |        |       |\n       |    |     |             false    |       'manchester city'\n       |    |     |                      'Manchester City'\n       |    |     'page not found • instagram'\n       |    'Page not found • Instagram'\n       pages.UnknownPage\n\n\tat org.codehaus.groovy.runtime.InvokerHelper.assertFailed(InvokerHelper.java:407)\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.assertFailed(ScriptBytecodeAdapter.java:708)\n\tat support.steps.steps$_run_closure2.doCall(steps.groovy:17)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)\n\tat org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:279)\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)\n\tat groovy.lang.Closure.call(Closure.java:418)\n\tat io.cucumber.groovy.Invoker.invoke(Invoker.java:19)\n\tat io.cucumber.groovy.GroovyStepDefinition.execute(GroovyStepDefinition.java:27)\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:56)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:84)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:75)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)\n\tat io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:130)\n\tat io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)\n\tat io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:130)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunBeforeAllHooks.evaluate(Cucumber.java:266)\n\tat io.cucumber.junit.Cucumber$RunAfterAllHooks.evaluate(Cucumber.java:281)\n\tat io.cucumber.junit.Cucumber$StartTestRun.evaluate(Cucumber.java:233)\n\tat io.cucumber.junit.Cucumber$FinishTestRun.evaluate(Cucumber.java:248)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)\n\tat org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)\n\tat org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)\n\tat org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)\n\tat org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)\n\tat org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)\n\tat org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)\n\tat jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)\n\tat org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)\n\tat org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)\n\tat org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)\n\tat worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)\n\tat worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : true,
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 6,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ {
+    "name" : "env.groovy:20",
+    "time" : {
+      "start" : 1686709919696,
+      "stop" : 1686709919998,
+      "duration" : 302
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "877bde014ad95318",
+      "name" : "a887c2e1-a77e-4358-82f7-50fcdda4fd01-attachment",
+      "source" : "877bde014ad95318.png",
+      "type" : "image/png",
+      "size" : 49917
+    } ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "attachmentsCount" : 1
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "Google"
+  }, {
+    "name" : "tag",
+    "value" : "regression"
+  }, {
+    "name" : "tag",
+    "value" : "prod"
+  }, {
+    "name" : "tag",
+    "value" : "Others"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1125-40"
+  }, {
+    "name" : "thread",
+    "value" : "2339@fv-az1125-40.Test worker(1)"
+  }, {
+    "name" : "feature",
+    "value" : "Google Search"
+  }, {
+    "name" : "story",
+    "value" : "Search for Other Teams"
+  }, {
+    "name" : "suite",
+    "value" : "Google Search"
+  }, {
+    "name" : "testClass",
+    "value" : "Search for Other Teams"
+  }, {
+    "name" : "framework",
+    "value" : "cucumber4jvm"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "gherkin_uri",
+    "value" : "file:///home/runner/work/geb-web-automation/geb-web-automation/src/test/resources/features/Search.feature"
+  }, {
+    "name" : "package",
+    "value" : "src.test.resources.features.Search_feature.Google Search"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "LinkText",
+    "value" : "Manchester City"
+  }, {
+    "name" : "SiteTitle",
+    "value" : "Manchester City"
+  }, {
+    "name" : "Team",
+    "value" : "Manchester City"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "e682f33e144bad9c",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/47//#testresult/e682f33e144bad9c",
+        "status" : "failed",
+        "statusDetails" : "assert page.title.toLowerCase().contains(correct.toLowerCase())\n       |    |     |             |        |       |\n       |    |     |             false    |       'manchester city'\n       |    |     |                      'Manchester City'\n       |    |     'redirecting... mancity.com'\n       |    'Redirecting... mancity.com'\n       pages.UnknownPage",
+        "time" : {
+          "start" : 1686669914389,
+          "stop" : 1686669922063,
+          "duration" : 7674
+        }
+      } ]
+    },
+    "tags" : [ "Google", "Others", "prod", "regression" ]
+  },
+  "source" : "40d4ae8821c709c4.json",
+  "parameterValues" : [ "Manchester City", "Manchester City", "Manchester City" ]
+}
