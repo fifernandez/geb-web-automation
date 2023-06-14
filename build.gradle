@@ -28,8 +28,19 @@ dependencies {
     testImplementation "org.slf4j:slf4j-simple:1.7.36"
 }
 
+allure {
+    adapter {
+        frameworks {
+            junit5 {
+                autoconfigureListeners.set(false)
+            }
+        }
+    }
+}
+
 test {
     finalizedBy generateCucumberReports
+    useJUnit {}
     if (System.getProperty("browser") != null) {
         systemProperty "geb.env", System.getProperty("browser")
     }
@@ -40,8 +51,6 @@ test {
         systemProperty "env", System.getProperty("env")
     }
     systemProperty "cucumber.filter.tags", getTags()
-    systemProperty("allure.results.directory", "build/allure-results")
-    useJUnit {}
     systemProperties System.properties
 }
 
