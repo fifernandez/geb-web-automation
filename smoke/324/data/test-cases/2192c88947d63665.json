@@ -1,0 +1,354 @@
+{
+  "uid" : "2192c88947d63665",
+  "name" : "Search only For Boca Juniors",
+  "fullName" : "Google Search: Search only For Boca Juniors",
+  "historyId" : "f06e1458ea402321eceffffee884e192",
+  "time" : {
+    "start" : 1687490571374,
+    "stop" : 1687490586491,
+    "duration" : 15117
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "env.groovy:15",
+    "time" : {
+      "start" : 1687490571382,
+      "stop" : 1687490575899,
+      "duration" : 4517
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given  I go to the 'Google Home' page",
+      "time" : {
+        "start" : 1687490575903,
+        "stop" : 1687490577491,
+        "duration" : 1588
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And  On the 'Google Home' page, in the 'Search Text' I type: 'Boca Juniors'",
+      "time" : {
+        "start" : 1687490577492,
+        "stop" : 1687490577730,
+        "duration" : 238
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And  On the 'Google Home' page, I click on: 'Search Button'",
+      "time" : {
+        "start" : 1687490577740,
+        "stop" : 1687490583024,
+        "duration" : 5284
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then  The first result must contain the text 'Boca'",
+      "time" : {
+        "start" : 1687490583025,
+        "stop" : 1687490583199,
+        "duration" : 174
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And  On the 'Results' page, I click on: 'The first result'",
+      "time" : {
+        "start" : 1687490583200,
+        "stop" : 1687490586440,
+        "duration" : 3240
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then  The title of the page must contain 'Boca'",
+      "time" : {
+        "start" : 1687490586441,
+        "stop" : 1687490586460,
+        "duration" : 19
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "env.groovy:20",
+    "time" : {
+      "start" : 1687490586461,
+      "stop" : 1687490586489,
+      "duration" : 28
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "Google"
+  }, {
+    "name" : "tag",
+    "value" : "smoke"
+  }, {
+    "name" : "tag",
+    "value" : "regression"
+  }, {
+    "name" : "tag",
+    "value" : "prod"
+  }, {
+    "name" : "tag",
+    "value" : "Boca"
+  }, {
+    "name" : "host",
+    "value" : "fv-az548-130"
+  }, {
+    "name" : "thread",
+    "value" : "2411@fv-az548-130.Test worker(1)"
+  }, {
+    "name" : "feature",
+    "value" : "Google Search"
+  }, {
+    "name" : "story",
+    "value" : "Search only For Boca Juniors"
+  }, {
+    "name" : "suite",
+    "value" : "Google Search"
+  }, {
+    "name" : "testClass",
+    "value" : "Search only For Boca Juniors"
+  }, {
+    "name" : "framework",
+    "value" : "cucumber4jvm"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "gherkin_uri",
+    "value" : "file:///home/runner/work/geb-web-automation/geb-web-automation/src/test/resources/features/Search.feature"
+  }, {
+    "name" : "package",
+    "value" : "src.test.resources.features.Search_feature.Google Search"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 15,
+        "unknown" : 0,
+        "total" : 16
+      },
+      "items" : [ {
+        "uid" : "5fe0341bbad00f1",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/323//#testresult/5fe0341bbad00f1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1687402965063,
+          "stop" : 1687402978623,
+          "duration" : 13560
+        }
+      }, {
+        "uid" : "e5ea31f6c77ea0fe",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/322//#testresult/e5ea31f6c77ea0fe",
+        "status" : "passed",
+        "time" : {
+          "start" : 1687316507551,
+          "stop" : 1687316519874,
+          "duration" : 12323
+        }
+      }, {
+        "uid" : "63a1e3e1eb384937",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/321//#testresult/63a1e3e1eb384937",
+        "status" : "passed",
+        "time" : {
+          "start" : 1687230170162,
+          "stop" : 1687230180162,
+          "duration" : 10000
+        }
+      }, {
+        "uid" : "f6ff348a4f10120a",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/320//#testresult/f6ff348a4f10120a",
+        "status" : "failed",
+        "statusDetails" : "condition did not pass in 5 seconds. Failed with exception:\ngeb.error.RequiredPageContentNotPresent: The required page content 'pages.GoogleHomePage -> logo: geb.navigator.DefaultNavigator' is not present",
+        "time" : {
+          "start" : 1687143778874,
+          "stop" : 1687143789573,
+          "duration" : 10699
+        }
+      }, {
+        "uid" : "e7c26d73fa589988",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/319//#testresult/e7c26d73fa589988",
+        "status" : "passed",
+        "time" : {
+          "start" : 1687057904894,
+          "stop" : 1687057922401,
+          "duration" : 17507
+        }
+      }, {
+        "uid" : "246426d1eb9df037",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/318//#testresult/246426d1eb9df037",
+        "status" : "passed",
+        "time" : {
+          "start" : 1686970910494,
+          "stop" : 1686970922461,
+          "duration" : 11967
+        }
+      }, {
+        "uid" : "4141c3305869ebd6",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/317//#testresult/4141c3305869ebd6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1686884613694,
+          "stop" : 1686884635239,
+          "duration" : 21545
+        }
+      }, {
+        "uid" : "2e732fe0aaf956c0",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/316//#testresult/2e732fe0aaf956c0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1686855714388,
+          "stop" : 1686855735861,
+          "duration" : 21473
+        }
+      }, {
+        "uid" : "eec3048ed53006d0",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/315//#testresult/eec3048ed53006d0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1686855152266,
+          "stop" : 1686855171187,
+          "duration" : 18921
+        }
+      }, {
+        "uid" : "6e5b20ea6f59cb99",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/314//#testresult/6e5b20ea6f59cb99",
+        "status" : "passed",
+        "time" : {
+          "start" : 1686798148892,
+          "stop" : 1686798168088,
+          "duration" : 19196
+        }
+      }, {
+        "uid" : "82d5c6bd6304f080",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/313//#testresult/82d5c6bd6304f080",
+        "status" : "passed",
+        "time" : {
+          "start" : 1686766142167,
+          "stop" : 1686766156968,
+          "duration" : 14801
+        }
+      }, {
+        "uid" : "ef1a1553bc9596b3",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/312//#testresult/ef1a1553bc9596b3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1686765099302,
+          "stop" : 1686765127468,
+          "duration" : 28166
+        }
+      }, {
+        "uid" : "d1e24eb66094fe51",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/309//#testresult/d1e24eb66094fe51",
+        "status" : "passed",
+        "time" : {
+          "start" : 1686711788651,
+          "stop" : 1686711811913,
+          "duration" : 23262
+        }
+      }, {
+        "uid" : "e7fe39095c4e1f5",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/308//#testresult/e7fe39095c4e1f5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1686669871826,
+          "stop" : 1686669884784,
+          "duration" : 12958
+        }
+      }, {
+        "uid" : "349e456870fbcb48",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/307//#testresult/349e456870fbcb48",
+        "status" : "passed",
+        "time" : {
+          "start" : 1686669740271,
+          "stop" : 1686669754604,
+          "duration" : 14333
+        }
+      } ]
+    },
+    "tags" : [ "Google", "prod", "Boca", "regression", "smoke" ]
+  },
+  "source" : "2192c88947d63665.json",
+  "parameterValues" : [ ]
+}
