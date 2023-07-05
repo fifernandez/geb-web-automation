@@ -1,0 +1,260 @@
+{
+  "uid" : "3977cb766984c9c7",
+  "name" : "Search for Other Teams",
+  "fullName" : "Google Search: Search for Other Teams",
+  "historyId" : "51b827fc9cbf1b036a95b18504ef4751",
+  "time" : {
+    "start" : 1688525337162,
+    "stop" : 1688525345443,
+    "duration" : 8281
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "env.groovy:15",
+    "time" : {
+      "start" : 1688525337162,
+      "stop" : 1688525337317,
+      "duration" : 155
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given  I go to the 'Google Home' page",
+      "time" : {
+        "start" : 1688525337320,
+        "stop" : 1688525337892,
+        "duration" : 572
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And  On the 'Google Home' page, in the 'Search Text' I type: 'Real Madrid'",
+      "time" : {
+        "start" : 1688525337893,
+        "stop" : 1688525337993,
+        "duration" : 100
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And  On the 'Google Home' page, I click on: 'Search Button'",
+      "time" : {
+        "start" : 1688525337996,
+        "stop" : 1688525342184,
+        "duration" : 4188
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then  The first result must contain the text 'Real Madrid'",
+      "time" : {
+        "start" : 1688525342185,
+        "stop" : 1688525342266,
+        "duration" : 81
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And  On the 'Results' page, I click on: 'The first result'",
+      "time" : {
+        "start" : 1688525342266,
+        "stop" : 1688525345427,
+        "duration" : 3161
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then  The title of the page must contain 'Real Madrid'",
+      "time" : {
+        "start" : 1688525345428,
+        "stop" : 1688525345442,
+        "duration" : 14
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "env.groovy:20",
+    "time" : {
+      "start" : 1688525345442,
+      "stop" : 1688525345443,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "Google"
+  }, {
+    "name" : "tag",
+    "value" : "regression"
+  }, {
+    "name" : "tag",
+    "value" : "prod"
+  }, {
+    "name" : "tag",
+    "value" : "Others"
+  }, {
+    "name" : "host",
+    "value" : "fv-az574-856"
+  }, {
+    "name" : "thread",
+    "value" : "2395@fv-az574-856.Test worker(1)"
+  }, {
+    "name" : "feature",
+    "value" : "Google Search"
+  }, {
+    "name" : "story",
+    "value" : "Search for Other Teams"
+  }, {
+    "name" : "suite",
+    "value" : "Google Search"
+  }, {
+    "name" : "testClass",
+    "value" : "Search for Other Teams"
+  }, {
+    "name" : "framework",
+    "value" : "cucumber4jvm"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "gherkin_uri",
+    "value" : "file:///home/runner/work/geb-web-automation/geb-web-automation/src/test/resources/features/Search.feature"
+  }, {
+    "name" : "package",
+    "value" : "src.test.resources.features.Search_feature.Google Search"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "LinkText",
+    "value" : "Real Madrid"
+  }, {
+    "name" : "SiteTitle",
+    "value" : "Real Madrid"
+  }, {
+    "name" : "Team",
+    "value" : "Real Madrid"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 5,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "19809b825c45dc14",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/50//#testresult/19809b825c45dc14",
+        "status" : "passed",
+        "time" : {
+          "start" : 1687920497696,
+          "stop" : 1687920504171,
+          "duration" : 6475
+        }
+      }, {
+        "uid" : "30cc4a7b778ce3a0",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/49//#testresult/30cc4a7b778ce3a0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1687314532858,
+          "stop" : 1687314539856,
+          "duration" : 6998
+        }
+      }, {
+        "uid" : "7b557229a7be6378",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/48//#testresult/7b557229a7be6378",
+        "status" : "passed",
+        "time" : {
+          "start" : 1686709920059,
+          "stop" : 1686709929822,
+          "duration" : 9763
+        }
+      }, {
+        "uid" : "b70a06329368beb9",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/47//#testresult/b70a06329368beb9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1686669922072,
+          "stop" : 1686669928314,
+          "duration" : 6242
+        }
+      } ]
+    },
+    "tags" : [ "Google", "Others", "prod", "regression" ]
+  },
+  "source" : "3977cb766984c9c7.json",
+  "parameterValues" : [ "Real Madrid", "Real Madrid", "Real Madrid" ]
+}
