@@ -1,0 +1,11 @@
+[ {
+  "uid" : "9ed6d4aafdb93d76",
+  "name" : "Search only For Boca Juniors",
+  "time" : {
+    "start" : 1690254234634,
+    "stop" : 1690254247391,
+    "duration" : 12757
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
