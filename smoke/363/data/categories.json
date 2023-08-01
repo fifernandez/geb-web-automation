@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "assert firstResult.text().contains(correct)\n       |           |      |        |\n       |           'Site' false    'Boca'\n       [[[[[ChromeDriver: chrome on linux (7c24b04fc518205bc5aae07daa583e22)] -> css selector: div.g.tF2Cxc]] -> css selector: h3]]",
+      "children" : [ {
+        "name" : "Search only For Boca Juniors",
+        "uid" : "94a1f23e800ef122",
+        "parentUid" : "dffb3b99c4b9a037bf8d437a720ae207",
+        "status" : "failed",
+        "time" : {
+          "start" : 1690859001476,
+          "stop" : 1690859014761,
+          "duration" : 13285
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "dffb3b99c4b9a037bf8d437a720ae207"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
