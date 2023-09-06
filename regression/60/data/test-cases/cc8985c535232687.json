@@ -1,0 +1,347 @@
+{
+  "uid" : "cc8985c535232687",
+  "name" : "Search for Other Teams",
+  "fullName" : "Google Search: Search for Other Teams",
+  "historyId" : "66f6143bd7d64c602acc59b9da1e700a",
+  "time" : {
+    "start" : 1693965768048,
+    "stop" : 1693965776576,
+    "duration" : 8528
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "env.groovy:15",
+    "time" : {
+      "start" : 1693965768048,
+      "stop" : 1693965768288,
+      "duration" : 240
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given  I go to the 'Google Home' page",
+      "time" : {
+        "start" : 1693965768289,
+        "stop" : 1693965768916,
+        "duration" : 627
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And  On the 'Google Home' page, in the 'Search Text' I type: 'Manchester City'",
+      "time" : {
+        "start" : 1693965768917,
+        "stop" : 1693965769022,
+        "duration" : 105
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And  On the 'Google Home' page, I click on: 'Search Button'",
+      "time" : {
+        "start" : 1693965769023,
+        "stop" : 1693965773091,
+        "duration" : 4068
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then  The first result must contain the text 'Manchester City'",
+      "time" : {
+        "start" : 1693965773092,
+        "stop" : 1693965773168,
+        "duration" : 76
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And  On the 'Results' page, I click on: 'The first result'",
+      "time" : {
+        "start" : 1693965773169,
+        "stop" : 1693965776354,
+        "duration" : 3185
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then  The title of the page must contain 'Manchester City'",
+      "time" : {
+        "start" : 1693965776355,
+        "stop" : 1693965776561,
+        "duration" : 206
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "env.groovy:20",
+    "time" : {
+      "start" : 1693965776561,
+      "stop" : 1693965776572,
+      "duration" : 11
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "Google"
+  }, {
+    "name" : "tag",
+    "value" : "regression"
+  }, {
+    "name" : "tag",
+    "value" : "prod"
+  }, {
+    "name" : "tag",
+    "value" : "Others"
+  }, {
+    "name" : "host",
+    "value" : "fv-az166-286"
+  }, {
+    "name" : "thread",
+    "value" : "2169@fv-az166-286.Test worker(1)"
+  }, {
+    "name" : "feature",
+    "value" : "Google Search"
+  }, {
+    "name" : "story",
+    "value" : "Search for Other Teams"
+  }, {
+    "name" : "suite",
+    "value" : "Google Search"
+  }, {
+    "name" : "testClass",
+    "value" : "Search for Other Teams"
+  }, {
+    "name" : "framework",
+    "value" : "cucumber4jvm"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "gherkin_uri",
+    "value" : "file:///home/runner/work/geb-web-automation/geb-web-automation/src/test/resources/features/Search.feature"
+  }, {
+    "name" : "package",
+    "value" : "src.test.resources.features.Search_feature.Google Search"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "LinkText",
+    "value" : "Manchester City"
+  }, {
+    "name" : "SiteTitle",
+    "value" : "Manchester City"
+  }, {
+    "name" : "Team",
+    "value" : "Manchester City"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 6,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 8,
+        "unknown" : 0,
+        "total" : 14
+      },
+      "items" : [ {
+        "uid" : "e7b07d7c9b3f0f1b",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/59//#testresult/e7b07d7c9b3f0f1b",
+        "status" : "failed",
+        "statusDetails" : "assert page.title.toLowerCase().contains(correct.toLowerCase())\n       |    |     |             |        |       |\n       |    |     |             false    |       'manchester city'\n       |    |     |                      'Manchester City'\n       |    |     'redirecting... mancity.com'\n       |    'Redirecting... mancity.com'\n       pages.UnknownPage",
+        "time" : {
+          "start" : 1693360940087,
+          "stop" : 1693360947482,
+          "duration" : 7395
+        }
+      }, {
+        "uid" : "6a84f0cd9fa7c519",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/58//#testresult/6a84f0cd9fa7c519",
+        "status" : "passed",
+        "time" : {
+          "start" : 1692756050475,
+          "stop" : 1692756059825,
+          "duration" : 9350
+        }
+      }, {
+        "uid" : "358e720fa0214441",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/57//#testresult/358e720fa0214441",
+        "status" : "failed",
+        "statusDetails" : "assert page.title.toLowerCase().contains(correct.toLowerCase())\n       |    |     |             |        |       |\n       |    |     |             false    |       'manchester city'\n       |    |     |                      'Manchester City'\n       |    |     'redirecting... mancity.com'\n       |    'Redirecting... mancity.com'\n       pages.UnknownPage",
+        "time" : {
+          "start" : 1692151245236,
+          "stop" : 1692151251940,
+          "duration" : 6704
+        }
+      }, {
+        "uid" : "b0066bd144dc924a",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/56//#testresult/b0066bd144dc924a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1691547209889,
+          "stop" : 1691547219375,
+          "duration" : 9486
+        }
+      }, {
+        "uid" : "3aa916d368b95b7a",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/55//#testresult/3aa916d368b95b7a",
+        "status" : "failed",
+        "statusDetails" : "assert page.title.toLowerCase().contains(correct.toLowerCase())\n       |    |     |             |        |       |\n       |    |     |             false    |       'manchester city'\n       |    |     |                      'Manchester City'\n       |    |     'redirecting... mancity.com'\n       |    'Redirecting... mancity.com'\n       pages.UnknownPage",
+        "time" : {
+          "start" : 1690942177815,
+          "stop" : 1690942185928,
+          "duration" : 8113
+        }
+      }, {
+        "uid" : "d0d5f0a873ef1da8",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/54//#testresult/d0d5f0a873ef1da8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1690338488027,
+          "stop" : 1690338497885,
+          "duration" : 9858
+        }
+      }, {
+        "uid" : "1b6214b924b17c7b",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/53//#testresult/1b6214b924b17c7b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1689737584379,
+          "stop" : 1689737590780,
+          "duration" : 6401
+        }
+      }, {
+        "uid" : "3243d392c6d18330",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/52//#testresult/3243d392c6d18330",
+        "status" : "passed",
+        "time" : {
+          "start" : 1689130024582,
+          "stop" : 1689130031373,
+          "duration" : 6791
+        }
+      }, {
+        "uid" : "382be83c477db60",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/51//#testresult/382be83c477db60",
+        "status" : "passed",
+        "time" : {
+          "start" : 1688525328009,
+          "stop" : 1688525337153,
+          "duration" : 9144
+        }
+      }, {
+        "uid" : "876f2d531c335caf",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/50//#testresult/876f2d531c335caf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1687920490315,
+          "stop" : 1687920497676,
+          "duration" : 7361
+        }
+      }, {
+        "uid" : "f80de76bb9720f50",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/49//#testresult/f80de76bb9720f50",
+        "status" : "failed",
+        "statusDetails" : "assert page.title.toLowerCase().contains(correct.toLowerCase())\n       |    |     |             |        |       |\n       |    |     |             false    |       'manchester city'\n       |    |     |                      'Manchester City'\n       |    |     'page not found • instagram'\n       |    'Page not found • Instagram'\n       pages.UnknownPage",
+        "time" : {
+          "start" : 1687314525106,
+          "stop" : 1687314532818,
+          "duration" : 7712
+        }
+      }, {
+        "uid" : "40d4ae8821c709c4",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/48//#testresult/40d4ae8821c709c4",
+        "status" : "failed",
+        "statusDetails" : "assert page.title.toLowerCase().contains(correct.toLowerCase())\n       |    |     |             |        |       |\n       |    |     |             false    |       'manchester city'\n       |    |     |                      'Manchester City'\n       |    |     'page not found • instagram'\n       |    'Page not found • Instagram'\n       pages.UnknownPage",
+        "time" : {
+          "start" : 1686709912294,
+          "stop" : 1686709920005,
+          "duration" : 7711
+        }
+      }, {
+        "uid" : "e682f33e144bad9c",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/47//#testresult/e682f33e144bad9c",
+        "status" : "failed",
+        "statusDetails" : "assert page.title.toLowerCase().contains(correct.toLowerCase())\n       |    |     |             |        |       |\n       |    |     |             false    |       'manchester city'\n       |    |     |                      'Manchester City'\n       |    |     'redirecting... mancity.com'\n       |    'Redirecting... mancity.com'\n       pages.UnknownPage",
+        "time" : {
+          "start" : 1686669914389,
+          "stop" : 1686669922063,
+          "duration" : 7674
+        }
+      } ]
+    },
+    "tags" : [ "Google", "Others", "prod", "regression" ]
+  },
+  "source" : "cc8985c535232687.json",
+  "parameterValues" : [ "Manchester City", "Manchester City", "Manchester City" ]
+}
