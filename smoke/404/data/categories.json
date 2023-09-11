@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "assert page.title.toLowerCase().contains(correct.toLowerCase())\n       |    |     |             |        |       |\n       |    |     |             false    'Boca'  'boca'\n       |    |     'error: the request could not be satisfied'\n       |    'ERROR: The request could not be satisfied'\n       pages.UnknownPage",
+      "children" : [ {
+        "name" : "Search only For Boca Juniors",
+        "uid" : "ab3798da4c5c3dc4",
+        "parentUid" : "cd2daebf73e651917407d6626395dd99",
+        "status" : "failed",
+        "time" : {
+          "start" : 1694401381466,
+          "stop" : 1694401407760,
+          "duration" : 26294
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "cd2daebf73e651917407d6626395dd99"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
