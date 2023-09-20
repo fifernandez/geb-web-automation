@@ -1,0 +1,43 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "assert page.title.toLowerCase().contains(correct.toLowerCase())\n       |    |     |             |        |       |\n       |    |     |             false    |       'manchester city'\n       |    |     |                      'Manchester City'\n       |    |     'redirecting... mancity.com'\n       |    'Redirecting... mancity.com'\n       pages.UnknownPage",
+      "children" : [ {
+        "name" : "Search for Other Teams",
+        "uid" : "4c0d654e78fd06e9",
+        "parentUid" : "c6df3d420503869bc2645db6789a19b2",
+        "status" : "failed",
+        "time" : {
+          "start" : 1695175395170,
+          "stop" : 1695175402710,
+          "duration" : 7540
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ "Manchester City", "Manchester City", "Manchester City" ]
+      } ],
+      "uid" : "c6df3d420503869bc2645db6789a19b2"
+    }, {
+      "name" : "assert page.title.toLowerCase().contains(correct.toLowerCase())\n       |    |     |             |        |       |\n       |    |     |             false    |       'real madrid'\n       |    |     |                      'Real Madrid'\n       |    |     'redirecting... mancity.com'\n       |    'Redirecting... mancity.com'\n       pages.UnknownPage",
+      "children" : [ {
+        "name" : "Just a failing test",
+        "uid" : "9909bf74fc8a8a79",
+        "parentUid" : "d44f2cb2bd7c165b6445fd1ac59e8b95",
+        "status" : "failed",
+        "time" : {
+          "start" : 1695175412228,
+          "stop" : 1695175421226,
+          "duration" : 8998
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "Manchester City", "Real Madrid", "Manchester City" ]
+      } ],
+      "uid" : "d44f2cb2bd7c165b6445fd1ac59e8b95"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
