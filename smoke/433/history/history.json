@@ -1,0 +1,429 @@
+{
+  "1d47f25546cdac5c1803861a6d0ef016" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 3,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "733e41db82744771",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/309//#testresult/733e41db82744771",
+      "status" : "passed",
+      "time" : {
+        "start" : 1686711788467,
+        "stop" : 1686711812009,
+        "duration" : 23542
+      }
+    }, {
+      "uid" : "e7fb6b3587a6b05c",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/308//#testresult/e7fb6b3587a6b05c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1686669871679,
+        "stop" : 1686669884906,
+        "duration" : 13227
+      }
+    }, {
+      "uid" : "9156a185e923bd4c",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/307//#testresult/9156a185e923bd4c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1686669740109,
+        "stop" : 1686669754679,
+        "duration" : 14570
+      }
+    } ]
+  },
+  "f06e1458ea402321eceffffee884e192" : {
+    "statistic" : {
+      "failed" : 15,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 109,
+      "unknown" : 0,
+      "total" : 124
+    },
+    "items" : [ {
+      "uid" : "b08848db1bddd7f1",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/432//#testresult/b08848db1bddd7f1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1696820547175,
+        "stop" : 1696820572118,
+        "duration" : 24943
+      }
+    }, {
+      "uid" : "72a7da51067b8d02",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/431//#testresult/72a7da51067b8d02",
+      "status" : "passed",
+      "time" : {
+        "start" : 1696734123123,
+        "stop" : 1696734145391,
+        "duration" : 22268
+      }
+    }, {
+      "uid" : "4067c8b20f5079ce",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/430//#testresult/4067c8b20f5079ce",
+      "status" : "passed",
+      "time" : {
+        "start" : 1696647733925,
+        "stop" : 1696647746327,
+        "duration" : 12402
+      }
+    }, {
+      "uid" : "a6d3ce6f255ffad1",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/429//#testresult/a6d3ce6f255ffad1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1696561319699,
+        "stop" : 1696561333262,
+        "duration" : 13563
+      }
+    }, {
+      "uid" : "60cdd7970e5dd22d",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/428//#testresult/60cdd7970e5dd22d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1696474930823,
+        "stop" : 1696474944640,
+        "duration" : 13817
+      }
+    }, {
+      "uid" : "d01b95219b9a2db1",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/427//#testresult/d01b95219b9a2db1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1696388573456,
+        "stop" : 1696388587734,
+        "duration" : 14278
+      }
+    }, {
+      "uid" : "57fb34d9db2549f3",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/426//#testresult/57fb34d9db2549f3",
+      "status" : "failed",
+      "statusDetails" : "condition did not pass in 5 seconds. Failed with exception:\ngeb.error.RequiredPageContentNotPresent: The required page content 'pages.GoogleHomePage -> logo: geb.navigator.DefaultNavigator' is not present",
+      "time" : {
+        "start" : 1696302172480,
+        "stop" : 1696302182625,
+        "duration" : 10145
+      }
+    }, {
+      "uid" : "42169a5bc15f8dee",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/425//#testresult/42169a5bc15f8dee",
+      "status" : "passed",
+      "time" : {
+        "start" : 1696215775448,
+        "stop" : 1696215787886,
+        "duration" : 12438
+      }
+    }, {
+      "uid" : "1fc74f2a29a710a8",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/424//#testresult/1fc74f2a29a710a8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1696129316750,
+        "stop" : 1696129337406,
+        "duration" : 20656
+      }
+    }, {
+      "uid" : "8170e6c3704c5dd2",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/423//#testresult/8170e6c3704c5dd2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1696042959184,
+        "stop" : 1696042971566,
+        "duration" : 12382
+      }
+    }, {
+      "uid" : "5b809ab5178c185d",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/422//#testresult/5b809ab5178c185d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695956557863,
+        "stop" : 1695956575563,
+        "duration" : 17700
+      }
+    }, {
+      "uid" : "fcd51e7970a50560",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/421//#testresult/fcd51e7970a50560",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695870185963,
+        "stop" : 1695870201561,
+        "duration" : 15598
+      }
+    }, {
+      "uid" : "86ae378ac8d2ef0d",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/420//#testresult/86ae378ac8d2ef0d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695783727028,
+        "stop" : 1695783740410,
+        "duration" : 13382
+      }
+    }, {
+      "uid" : "21534d9e179b7ed5",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/419//#testresult/21534d9e179b7ed5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695697329300,
+        "stop" : 1695697342497,
+        "duration" : 13197
+      }
+    }, {
+      "uid" : "64066e1e6cdd3823",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/418//#testresult/64066e1e6cdd3823",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695610924994,
+        "stop" : 1695610941025,
+        "duration" : 16031
+      }
+    }, {
+      "uid" : "8ba6e6a1fce9ac84",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/417//#testresult/8ba6e6a1fce9ac84",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695524513169,
+        "stop" : 1695524525677,
+        "duration" : 12508
+      }
+    }, {
+      "uid" : "728934579141df3f",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/416//#testresult/728934579141df3f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695438127644,
+        "stop" : 1695438142919,
+        "duration" : 15275
+      }
+    }, {
+      "uid" : "4711b42b3489f4a4",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/415//#testresult/4711b42b3489f4a4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695351770375,
+        "stop" : 1695351783632,
+        "duration" : 13257
+      }
+    }, {
+      "uid" : "517fe914d13a913",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/414//#testresult/517fe914d13a913",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695265351516,
+        "stop" : 1695265363639,
+        "duration" : 12123
+      }
+    }, {
+      "uid" : "c39e4bb82aefd078",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/413//#testresult/c39e4bb82aefd078",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695178928672,
+        "stop" : 1695178942702,
+        "duration" : 14030
+      }
+    } ]
+  },
+  "d4af45d603db7737ef311467ccf032b2" : {
+    "statistic" : {
+      "failed" : 2,
+      "broken" : 0,
+      "skipped" : 8,
+      "passed" : 27,
+      "unknown" : 0,
+      "total" : 37
+    },
+    "items" : [ {
+      "uid" : "ea79939e23929a11",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/311//#testresult/ea79939e23929a11",
+      "status" : "passed",
+      "time" : {
+        "start" : 1686764901442,
+        "stop" : 1686764935534,
+        "duration" : 34092
+      }
+    }, {
+      "uid" : "b4ded383398975bb",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/310//#testresult/b4ded383398975bb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1686764799253,
+        "stop" : 1686764825665,
+        "duration" : 26412
+      }
+    }, {
+      "uid" : "7972c1a6da7266e",
+      "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/306//#testresult/7972c1a6da7266e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1686669183847,
+        "stop" : 1686669196029,
+        "duration" : 12182
+      }
+    }, {
+      "uid" : "2002b57b2fcda0bf",
+      "reportUrl" : "https://fifernandez.github.io/basic-web-automation/smoke/305//#testresult/2002b57b2fcda0bf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1686668882100,
+        "stop" : 1686668913745,
+        "duration" : 31645
+      }
+    }, {
+      "uid" : "fee57397c979ce53",
+      "reportUrl" : "https://fifernandez.github.io/basic-web-automation/smoke/304//#testresult/fee57397c979ce53",
+      "status" : "passed",
+      "time" : {
+        "start" : 1686668695371,
+        "stop" : 1686668708566,
+        "duration" : 13195
+      }
+    }, {
+      "uid" : "787487eb8cd16019",
+      "reportUrl" : "https://fifernandez.github.io/basic-web-automation/smoke/303//#testresult/787487eb8cd16019",
+      "status" : "skipped",
+      "statusDetails" : "session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 113.0.5672.126 with binary path /usr/bin/google-chrome\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'fv-az280-107', ip: '10.1.0.126', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-1038-azure', java.version: '17.0.7'\nDriver info: driver.version: ChromeDriver\nremote stacktrace: #0 0x564c142884e3 <unknown>\n#1 0x564c13fb7c76 <unknown>\n#2 0x564c13fe504a <unknown>\n#3 0x564c13fe04a1 <unknown>\n#4 0x564c13fdd029 <unknown>\n#5 0x564c1401bccc <unknown>\n#6 0x564c1401b47f <unknown>\n#7 0x564c14012de3 <unknown>\n#8 0x564c13fe82dd <unknown>\n#9 0x564c13fe934e <unknown>\n#10 0x564c142483e4 <unknown>\n#11 0x564c1424c3d7 <unknown>\n#12 0x564c14256b20 <unknown>\n#13 0x564c1424d023 <unknown>\n#14 0x564c1421b1aa <unknown>\n#15 0x564c142716b8 <unknown>\n#16 0x564c14271847 <unknown>\n#17 0x564c14281243 <unknown>\n#18 0x7f5cb25aeb43 <unknown>\n",
+      "time" : {
+        "start" : 1686625389444,
+        "stop" : 1686625398109,
+        "duration" : 8665
+      }
+    }, {
+      "uid" : "d461247551f51510",
+      "reportUrl" : "https://fifernandez.github.io/basic-web-automation/smoke/302//#testresult/d461247551f51510",
+      "status" : "skipped",
+      "statusDetails" : "session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 113.0.5672.126 with binary path /usr/bin/google-chrome\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'fv-az363-417', ip: '10.1.0.201', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-1038-azure', java.version: '17.0.7'\nDriver info: driver.version: ChromeDriver\nremote stacktrace: #0 0x561238dfa4e3 <unknown>\n#1 0x561238b29c76 <unknown>\n#2 0x561238b5704a <unknown>\n#3 0x561238b524a1 <unknown>\n#4 0x561238b4f029 <unknown>\n#5 0x561238b8dccc <unknown>\n#6 0x561238b8d47f <unknown>\n#7 0x561238b84de3 <unknown>\n#8 0x561238b5a2dd <unknown>\n#9 0x561238b5b34e <unknown>\n#10 0x561238dba3e4 <unknown>\n#11 0x561238dbe3d7 <unknown>\n#12 0x561238dc8b20 <unknown>\n#13 0x561238dbf023 <unknown>\n#14 0x561238d8d1aa <unknown>\n#15 0x561238de36b8 <unknown>\n#16 0x561238de3847 <unknown>\n#17 0x561238df3243 <unknown>\n#18 0x7f2b223f3b43 <unknown>\n",
+      "time" : {
+        "start" : 1686539607650,
+        "stop" : 1686539613701,
+        "duration" : 6051
+      }
+    }, {
+      "uid" : "d1a2e5907db6a9da",
+      "reportUrl" : "https://fifernandez.github.io/basic-web-automation/smoke/301//#testresult/d1a2e5907db6a9da",
+      "status" : "skipped",
+      "statusDetails" : "session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 113.0.5672.126 with binary path /usr/bin/google-chrome\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'fv-az1109-199', ip: '10.1.0.39', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-1038-azure', java.version: '17.0.7'\nDriver info: driver.version: ChromeDriver\nremote stacktrace: #0 0x55f408d454e3 <unknown>\n#1 0x55f408a74c76 <unknown>\n#2 0x55f408aa204a <unknown>\n#3 0x55f408a9d4a1 <unknown>\n#4 0x55f408a9a029 <unknown>\n#5 0x55f408ad8ccc <unknown>\n#6 0x55f408ad847f <unknown>\n#7 0x55f408acfde3 <unknown>\n#8 0x55f408aa52dd <unknown>\n#9 0x55f408aa634e <unknown>\n#10 0x55f408d053e4 <unknown>\n#11 0x55f408d093d7 <unknown>\n#12 0x55f408d13b20 <unknown>\n#13 0x55f408d0a023 <unknown>\n#14 0x55f408cd81aa <unknown>\n#15 0x55f408d2e6b8 <unknown>\n#16 0x55f408d2e847 <unknown>\n#17 0x55f408d3e243 <unknown>\n#18 0x7f8c4fcf3b43 <unknown>\n",
+      "time" : {
+        "start" : 1686453551972,
+        "stop" : 1686453554754,
+        "duration" : 2782
+      }
+    }, {
+      "uid" : "dffb253e139571ee",
+      "reportUrl" : "https://fifernandez.github.io/basic-web-automation/smoke/300//#testresult/dffb253e139571ee",
+      "status" : "skipped",
+      "statusDetails" : "session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 113.0.5672.126 with binary path /usr/bin/google-chrome\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'fv-az741-688', ip: '10.1.0.83', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-1038-azure', java.version: '17.0.7'\nDriver info: driver.version: ChromeDriver\nremote stacktrace: #0 0x56178da7b4e3 <unknown>\n#1 0x56178d7aac76 <unknown>\n#2 0x56178d7d804a <unknown>\n#3 0x56178d7d34a1 <unknown>\n#4 0x56178d7d0029 <unknown>\n#5 0x56178d80eccc <unknown>\n#6 0x56178d80e47f <unknown>\n#7 0x56178d805de3 <unknown>\n#8 0x56178d7db2dd <unknown>\n#9 0x56178d7dc34e <unknown>\n#10 0x56178da3b3e4 <unknown>\n#11 0x56178da3f3d7 <unknown>\n#12 0x56178da49b20 <unknown>\n#13 0x56178da40023 <unknown>\n#14 0x56178da0e1aa <unknown>\n#15 0x56178da646b8 <unknown>\n#16 0x56178da64847 <unknown>\n#17 0x56178da74243 <unknown>\n#18 0x7fd2c95deb43 <unknown>\n",
+      "time" : {
+        "start" : 1686366123601,
+        "stop" : 1686366125619,
+        "duration" : 2018
+      }
+    }, {
+      "uid" : "d7886048f09f7e29",
+      "reportUrl" : "https://fifernandez.github.io/basic-web-automation/smoke/299//#testresult/d7886048f09f7e29",
+      "status" : "skipped",
+      "statusDetails" : "session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 113.0.5672.126 with binary path /usr/bin/google-chrome\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'fv-az1109-199', ip: '10.1.0.165', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-1038-azure', java.version: '17.0.7'\nDriver info: driver.version: ChromeDriver\nremote stacktrace: #0 0x562b9f9384e3 <unknown>\n#1 0x562b9f667c76 <unknown>\n#2 0x562b9f69504a <unknown>\n#3 0x562b9f6904a1 <unknown>\n#4 0x562b9f68d029 <unknown>\n#5 0x562b9f6cbccc <unknown>\n#6 0x562b9f6cb47f <unknown>\n#7 0x562b9f6c2de3 <unknown>\n#8 0x562b9f6982dd <unknown>\n#9 0x562b9f69934e <unknown>\n#10 0x562b9f8f83e4 <unknown>\n#11 0x562b9f8fc3d7 <unknown>\n#12 0x562b9f906b20 <unknown>\n#13 0x562b9f8fd023 <unknown>\n#14 0x562b9f8cb1aa <unknown>\n#15 0x562b9f9216b8 <unknown>\n#16 0x562b9f921847 <unknown>\n#17 0x562b9f931243 <unknown>\n#18 0x7ff3ce9ddb43 <unknown>\n",
+      "time" : {
+        "start" : 1686343975317,
+        "stop" : 1686343977901,
+        "duration" : 2584
+      }
+    }, {
+      "uid" : "4e60f2e32ab9028f",
+      "reportUrl" : "https://fifernandez.github.io/basic-web-automation/smoke/298//#testresult/4e60f2e32ab9028f",
+      "status" : "skipped",
+      "statusDetails" : "session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 113.0.5672.126 with binary path /usr/bin/google-chrome\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'fv-az627-326', ip: '10.1.0.134', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-1038-azure', java.version: '17.0.7'\nDriver info: driver.version: ChromeDriver\nremote stacktrace: #0 0x55cb0a38a4e3 <unknown>\n#1 0x55cb0a0b9c76 <unknown>\n#2 0x55cb0a0e704a <unknown>\n#3 0x55cb0a0e24a1 <unknown>\n#4 0x55cb0a0df029 <unknown>\n#5 0x55cb0a11dccc <unknown>\n#6 0x55cb0a11d47f <unknown>\n#7 0x55cb0a114de3 <unknown>\n#8 0x55cb0a0ea2dd <unknown>\n#9 0x55cb0a0eb34e <unknown>\n#10 0x55cb0a34a3e4 <unknown>\n#11 0x55cb0a34e3d7 <unknown>\n#12 0x55cb0a358b20 <unknown>\n#13 0x55cb0a34f023 <unknown>\n#14 0x55cb0a31d1aa <unknown>\n#15 0x55cb0a3736b8 <unknown>\n#16 0x55cb0a373847 <unknown>\n#17 0x55cb0a383243 <unknown>\n#18 0x7f3a2f931b43 <unknown>\n",
+      "time" : {
+        "start" : 1686343836523,
+        "stop" : 1686343848851,
+        "duration" : 12328
+      }
+    }, {
+      "uid" : "d9df5aa82bae9c5e",
+      "reportUrl" : "https://fifernandez.github.io/basic-web-automation/smoke/297//#testresult/d9df5aa82bae9c5e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1686280472947,
+        "stop" : 1686280485062,
+        "duration" : 12115
+      }
+    }, {
+      "uid" : "b60f2021e6bcc320",
+      "reportUrl" : "https://fifernandez.github.io/basic-web-automation/smoke/296//#testresult/b60f2021e6bcc320",
+      "status" : "passed",
+      "time" : {
+        "start" : 1686193905137,
+        "stop" : 1686193914697,
+        "duration" : 9560
+      }
+    }, {
+      "uid" : "2f65e1c1865fe3ec",
+      "reportUrl" : "https://fifernandez.github.io/basic-web-automation/smoke/295//#testresult/2f65e1c1865fe3ec",
+      "status" : "passed",
+      "time" : {
+        "start" : 1686107513808,
+        "stop" : 1686107524010,
+        "duration" : 10202
+      }
+    }, {
+      "uid" : "ad8c1f9cbe7d6f37",
+      "reportUrl" : "https://fifernandez.github.io/basic-web-automation/smoke/294//#testresult/ad8c1f9cbe7d6f37",
+      "status" : "passed",
+      "time" : {
+        "start" : 1686021179767,
+        "stop" : 1686021205322,
+        "duration" : 25555
+      }
+    }, {
+      "uid" : "8df654da3c4d64ed",
+      "reportUrl" : "https://fifernandez.github.io/basic-web-automation/smoke/293//#testresult/8df654da3c4d64ed",
+      "status" : "passed",
+      "time" : {
+        "start" : 1685934574285,
+        "stop" : 1685934585007,
+        "duration" : 10722
+      }
+    }, {
+      "uid" : "f92b909324b453e3",
+      "reportUrl" : "https://fifernandez.github.io/basic-web-automation/smoke/292//#testresult/f92b909324b453e3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1685848880115,
+        "stop" : 1685848895424,
+        "duration" : 15309
+      }
+    }, {
+      "uid" : "be3fcc6736b69c81",
+      "reportUrl" : "https://fifernandez.github.io/basic-web-automation/smoke/291//#testresult/be3fcc6736b69c81",
+      "status" : "passed",
+      "time" : {
+        "start" : 1685761320623,
+        "stop" : 1685761335470,
+        "duration" : 14847
+      }
+    }, {
+      "uid" : "50b1eb15f71b1ca5",
+      "reportUrl" : "https://fifernandez.github.io/basic-web-automation/smoke/290//#testresult/50b1eb15f71b1ca5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1685675240393,
+        "stop" : 1685675249496,
+        "duration" : 9103
+      }
+    }, {
+      "uid" : "13ff687647a8ddbd",
+      "reportUrl" : "https://fifernandez.github.io/basic-web-automation/smoke/289//#testresult/13ff687647a8ddbd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1685589907359,
+        "stop" : 1685589918393,
+        "duration" : 11034
+      }
+    } ]
+  }
+}
