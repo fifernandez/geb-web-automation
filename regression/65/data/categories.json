@@ -1,0 +1,43 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "assert page.title.toLowerCase().contains(correct.toLowerCase())\n       |    |     |             |        |       |\n       |    |     |             false    |       'real madrid'\n       |    |     'login • instagram'    'Real Madrid'\n       |    'Login • Instagram'\n       pages.UnknownPage",
+      "children" : [ {
+        "name" : "Search for Other Teams",
+        "uid" : "bf317e65102ffef6",
+        "parentUid" : "66acec91683ceb990a6efd08ba0b469e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1696989836502,
+          "stop" : 1696989844201,
+          "duration" : 7699
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ "Real Madrid", "Real Madrid", "Real Madrid" ]
+      } ],
+      "uid" : "66acec91683ceb990a6efd08ba0b469e"
+    }, {
+      "name" : "assert page.title.toLowerCase().contains(correct.toLowerCase())\n       |    |     |             |        |       |\n       |    |     |             false    |       'real madrid'\n       |    |     |                      'Real Madrid'\n       |    |     'manchester city scores, stats and highlights - espn'\n       |    'Manchester City Scores, Stats and Highlights - ESPN'\n       pages.UnknownPage",
+      "children" : [ {
+        "name" : "Just a failing test",
+        "uid" : "8d9902de9c0283ef",
+        "parentUid" : "f717881c23fdfcd437363058c3a93dc0",
+        "status" : "failed",
+        "time" : {
+          "start" : 1696989844241,
+          "stop" : 1696989854714,
+          "duration" : 10473
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "Manchester City", "Real Madrid", "Manchester City" ]
+      } ],
+      "uid" : "f717881c23fdfcd437363058c3a93dc0"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
