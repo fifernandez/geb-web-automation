@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "condition did not pass in 5 seconds. Failed with exception:\ngeb.error.RequiredPageContentNotPresent: The required page content 'pages.GoogleHomePage -> logo: geb.navigator.DefaultNavigator' is not present",
+      "children" : [ {
+        "name" : "Search only For Boca Juniors",
+        "uid" : "977085545c44b1d",
+        "parentUid" : "e5bf6440ba16d6c4281055ab4e200921",
+        "status" : "failed",
+        "time" : {
+          "start" : 1698807773302,
+          "stop" : 1698807782857,
+          "duration" : 9555
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e5bf6440ba16d6c4281055ab4e200921"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
