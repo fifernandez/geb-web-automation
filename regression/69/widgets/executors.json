@@ -1,0 +1,10 @@
+[ {
+  "name" : "GitHub Actions",
+  "type" : "github",
+  "url" : "https://fifernandez.github.io/geb-web-automation/regression",
+  "buildOrder" : 69,
+  "buildName" : "GitHub Actions Run #6792818528",
+  "buildUrl" : "https://github.com/fifernandez/geb-web-automation/actions/runs/6792818528",
+  "reportName" : "Allure Report with history",
+  "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/69/"
+} ]
