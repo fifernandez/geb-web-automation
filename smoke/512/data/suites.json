@@ -1,0 +1,22 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "Google Search",
+    "children" : [ {
+      "name" : "Search only For Boca Juniors",
+      "uid" : "8db50d3e588c381c",
+      "parentUid" : "187db89b840e5d00e2c198598849c11a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1703646381573,
+        "stop" : 1703646393467,
+        "duration" : 11894
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "187db89b840e5d00e2c198598849c11a"
+  } ],
+  "name" : "suites"
+}
