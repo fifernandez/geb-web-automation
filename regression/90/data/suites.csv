@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Apr 03 02:04:21 GMT 2024","Wed Apr 03 02:04:38 GMT 2024","16958","","Google Search","","Search only For Boca Juniors","","Search only For Boca Juniors",""
+"passed","Wed Apr 03 02:04:38 GMT 2024","Wed Apr 03 02:04:48 GMT 2024","9794","","Google Search","","Search for Other Teams","","Search for Other Teams",""
+"passed","Wed Apr 03 02:04:48 GMT 2024","Wed Apr 03 02:04:55 GMT 2024","7492","","Google Search","","Search for Other Teams","","Search for Other Teams",""
+"failed","Wed Apr 03 02:04:55 GMT 2024","Wed Apr 03 02:05:03 GMT 2024","8292","","Google Search","","Just a failing test","","Just a failing test",""
