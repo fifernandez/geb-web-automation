@@ -1,0 +1,41 @@
+[ {
+  "uid" : "7eb56f2dc16c2e",
+  "name" : "Search for Other Teams",
+  "time" : {
+    "start" : 1716948793562,
+    "stop" : 1716948800945,
+    "duration" : 7383
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ebd6085eb433c457",
+  "name" : "Just a failing test",
+  "time" : {
+    "start" : 1716948800952,
+    "stop" : 1716948809378,
+    "duration" : 8426
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "88299f08a9d1f6e8",
+  "name" : "Search only For Boca Juniors",
+  "time" : {
+    "start" : 1716948773134,
+    "stop" : 1716948783873,
+    "duration" : 10739
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c2327cb2ddf64723",
+  "name" : "Search for Other Teams",
+  "time" : {
+    "start" : 1716948783971,
+    "stop" : 1716948793554,
+    "duration" : 9583
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
