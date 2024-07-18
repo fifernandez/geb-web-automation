@@ -1,0 +1,26 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "fv-az1106-454",
+    "children" : [ {
+      "name" : "2273@fv-az1106-454.Test worker(1)",
+      "children" : [ {
+        "name" : "Search only For Boca Juniors",
+        "uid" : "ed6fc69608ca7d1a",
+        "parentUid" : "80d7d01d0225594890d36cc8dd105ec8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1721272106038,
+          "stop" : 1721272126074,
+          "duration" : 20036
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "80d7d01d0225594890d36cc8dd105ec8"
+    } ],
+    "uid" : "42a65e8d63515e5f1b41f26372968374"
+  } ],
+  "name" : "timeline"
+}
