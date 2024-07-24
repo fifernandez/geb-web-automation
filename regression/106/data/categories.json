@@ -1,0 +1,43 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "assert page.title.toLowerCase().contains(correct.toLowerCase())\n       |    |     |             |        |       |\n       |    |     |             false    |       'manchester city'\n       |    |     'login • instagram'    'Manchester City'\n       |    'Login • Instagram'\n       pages.UnknownPage",
+      "children" : [ {
+        "name" : "Search for Other Teams",
+        "uid" : "bf5dcba83629fa85",
+        "parentUid" : "043908ffc40a77ac8341f4490bca3abc",
+        "status" : "failed",
+        "time" : {
+          "start" : 1721787727591,
+          "stop" : 1721787737322,
+          "duration" : 9731
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "Manchester City", "Manchester City", "Manchester City" ]
+      } ],
+      "uid" : "043908ffc40a77ac8341f4490bca3abc"
+    }, {
+      "name" : "assert page.title.toLowerCase().contains(correct.toLowerCase())\n       |    |     |             |        |       |\n       |    |     |             false    |       'real madrid'\n       |    |     'login • instagram'    'Real Madrid'\n       |    'Login • Instagram'\n       pages.UnknownPage",
+      "children" : [ {
+        "name" : "Just a failing test",
+        "uid" : "378104e8af3f0ae3",
+        "parentUid" : "66acec91683ceb990a6efd08ba0b469e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1721787746140,
+          "stop" : 1721787754304,
+          "duration" : 8164
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "Manchester City", "Real Madrid", "Manchester City" ]
+      } ],
+      "uid" : "66acec91683ceb990a6efd08ba0b469e"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
