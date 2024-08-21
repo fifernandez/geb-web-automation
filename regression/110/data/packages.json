@@ -1,0 +1,61 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "src.test.resources.features.Search_feature.Google Search",
+    "children" : [ {
+      "name" : "Search only For Boca Juniors",
+      "uid" : "e7b1356c7740759a",
+      "parentUid" : "7747a2ad08ac223c1349a986951bb023",
+      "status" : "passed",
+      "time" : {
+        "start" : 1724207049881,
+        "stop" : 1724207070504,
+        "duration" : 20623
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Search for Other Teams",
+      "uid" : "458d69b4915287ab",
+      "parentUid" : "7747a2ad08ac223c1349a986951bb023",
+      "status" : "passed",
+      "time" : {
+        "start" : 1724207070578,
+        "stop" : 1724207078744,
+        "duration" : 8166
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Manchester City", "Manchester City", "Manchester City" ]
+    }, {
+      "name" : "Search for Other Teams",
+      "uid" : "8983acfeb227cd9e",
+      "parentUid" : "7747a2ad08ac223c1349a986951bb023",
+      "status" : "passed",
+      "time" : {
+        "start" : 1724207078752,
+        "stop" : 1724207086931,
+        "duration" : 8179
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Real Madrid", "Real Madrid", "Real Madrid" ]
+    }, {
+      "name" : "Just a failing test",
+      "uid" : "35fbbbe5ff25d749",
+      "parentUid" : "7747a2ad08ac223c1349a986951bb023",
+      "status" : "failed",
+      "time" : {
+        "start" : 1724207086940,
+        "stop" : 1724207094038,
+        "duration" : 7098
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Manchester City", "Real Madrid", "Manchester City" ]
+    } ],
+    "uid" : "src.test.resources.features.Search_feature.Google Search"
+  } ],
+  "name" : "packages"
+}
