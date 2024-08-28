@@ -1,0 +1,65 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "fv-az1383-551",
+    "children" : [ {
+      "name" : "2380@fv-az1383-551.Test worker(1)",
+      "children" : [ {
+        "name" : "Search for Other Teams",
+        "uid" : "5d54640537551a0",
+        "parentUid" : "39902d7a87af515e2337aa7d4d73e757",
+        "status" : "passed",
+        "time" : {
+          "start" : 1724812077726,
+          "stop" : 1724812085373,
+          "duration" : 7647
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "Manchester City", "Manchester City", "Manchester City" ]
+      }, {
+        "name" : "Just a failing test",
+        "uid" : "5cc0a1839ad8f9a2",
+        "parentUid" : "39902d7a87af515e2337aa7d4d73e757",
+        "status" : "failed",
+        "time" : {
+          "start" : 1724812092709,
+          "stop" : 1724812099682,
+          "duration" : 6973
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "Manchester City", "Real Madrid", "Manchester City" ]
+      }, {
+        "name" : "Search for Other Teams",
+        "uid" : "c40bb7e074967fd0",
+        "parentUid" : "39902d7a87af515e2337aa7d4d73e757",
+        "status" : "passed",
+        "time" : {
+          "start" : 1724812085382,
+          "stop" : 1724812092693,
+          "duration" : 7311
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "Real Madrid", "Real Madrid", "Real Madrid" ]
+      }, {
+        "name" : "Search only For Boca Juniors",
+        "uid" : "a10b931b8e952990",
+        "parentUid" : "39902d7a87af515e2337aa7d4d73e757",
+        "status" : "passed",
+        "time" : {
+          "start" : 1724812067364,
+          "stop" : 1724812077612,
+          "duration" : 10248
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "39902d7a87af515e2337aa7d4d73e757"
+    } ],
+    "uid" : "e1bff11b824c9b9322e8b69236976600"
+  } ],
+  "name" : "timeline"
+}
