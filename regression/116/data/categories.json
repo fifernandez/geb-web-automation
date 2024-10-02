@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "assert page.title.toLowerCase().contains(correct.toLowerCase())\n       |    |     |             |        |       |\n       |    |     |             false    |       'real madrid'\n       |    |     |                      'Real Madrid'\n       |    |     'manchester city fc - official website of man city f.c.'\n       |    'Manchester City FC - Official Website of Man City F.C.'\n       pages.UnknownPage",
+      "children" : [ {
+        "name" : "Just a failing test",
+        "uid" : "b35f37be51b59160",
+        "parentUid" : "a60b8c48aba86b8c9bbf48a86abf4a2c",
+        "status" : "failed",
+        "time" : {
+          "start" : 1727836629514,
+          "stop" : 1727836635774,
+          "duration" : 6260
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "Manchester City", "Real Madrid", "Manchester City" ]
+      } ],
+      "uid" : "a60b8c48aba86b8c9bbf48a86abf4a2c"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
