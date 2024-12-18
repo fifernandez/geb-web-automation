@@ -1,0 +1,10 @@
+[ {
+  "name" : "GitHub Actions",
+  "type" : "github",
+  "url" : "https://fifernandez.github.io/geb-web-automation/smoke",
+  "buildOrder" : 806,
+  "buildName" : "GitHub Actions Run #12385314265",
+  "buildUrl" : "https://github.com/fifernandez/geb-web-automation/actions/runs/12385314265",
+  "reportName" : "Allure Report with history",
+  "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/806/"
+} ]
