@@ -1,0 +1,65 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "The required page content 'pages.GoogleResultsPage -> allResults: geb.navigator.DefaultNavigator' is not present",
+      "children" : [ {
+        "name" : "Search only For Boca Juniors",
+        "uid" : "d75519d487dfd869",
+        "parentUid" : "c30b4b61d46bb52b2a0b7df3f99202cc",
+        "status" : "failed",
+        "time" : {
+          "start" : 1741137581105,
+          "stop" : 1741137587401,
+          "duration" : 6296
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Search for Other Teams",
+        "uid" : "771646c8a1147ab7",
+        "parentUid" : "c30b4b61d46bb52b2a0b7df3f99202cc",
+        "status" : "failed",
+        "time" : {
+          "start" : 1741137587497,
+          "stop" : 1741137591278,
+          "duration" : 3781
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ "Manchester City", "Manchester City", "Manchester City" ]
+      }, {
+        "name" : "Search for Other Teams",
+        "uid" : "38e3741f507199bc",
+        "parentUid" : "c30b4b61d46bb52b2a0b7df3f99202cc",
+        "status" : "failed",
+        "time" : {
+          "start" : 1741137591289,
+          "stop" : 1741137594601,
+          "duration" : 3312
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "Real Madrid", "Real Madrid", "Real Madrid" ]
+      }, {
+        "name" : "Just a failing test",
+        "uid" : "e5f52914d3d4e0fe",
+        "parentUid" : "c30b4b61d46bb52b2a0b7df3f99202cc",
+        "status" : "failed",
+        "time" : {
+          "start" : 1741137594632,
+          "stop" : 1741137597830,
+          "duration" : 3198
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "Manchester City", "Real Madrid", "Manchester City" ]
+      } ],
+      "uid" : "c30b4b61d46bb52b2a0b7df3f99202cc"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
