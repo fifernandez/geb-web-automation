@@ -16,9 +16,9 @@ repositories {
 dependencies {
     testImplementation "org.gebish:geb-core:7.0"
     testImplementation "org.apache.groovy:groovy-json:3.0.17"
-    testImplementation "org.seleniumhq.selenium:selenium-firefox-driver:4.25.0"
-    testImplementation "org.seleniumhq.selenium:selenium-chrome-driver:4.25.0"
-    testImplementation "org.seleniumhq.selenium:selenium-safari-driver:4.25.0"
+    testImplementation "org.seleniumhq.selenium:selenium-firefox-driver:4.29.0"
+    testImplementation "org.seleniumhq.selenium:selenium-chrome-driver:4.29.0"
+    testImplementation "org.seleniumhq.selenium:selenium-safari-driver:4.29.0"
     testImplementation "org.seleniumhq.selenium:selenium-support:4.2.2"
     testImplementation "io.cucumber:cucumber-groovy:6.10.4"
     testImplementation "io.cucumber:cucumber-junit:7.11.0"
