@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Mar 05 05:45:53 GMT 2025","Wed Mar 05 05:45:57 GMT 2025","4691","","Phones","","Search for not present phone","","Search for not present phone",""
+"passed","Wed Mar 05 05:45:30 GMT 2025","Wed Mar 05 05:45:53 GMT 2025","22443","","Phones","","Search for present phone","","Search for present phone",""

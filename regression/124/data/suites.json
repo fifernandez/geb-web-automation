@@ -1,0 +1,35 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "Phones",
+    "children" : [ {
+      "name" : "Search for present phone",
+      "uid" : "bba91885c6a35190",
+      "parentUid" : "b90a54a87edfab0f184382d7e09b22cf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1741153530683,
+        "stop" : 1741153553126,
+        "duration" : 22443
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Search for not present phone",
+      "uid" : "d01b86a5ff40c32",
+      "parentUid" : "b90a54a87edfab0f184382d7e09b22cf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1741153553227,
+        "stop" : 1741153557918,
+        "duration" : 4691
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "b90a54a87edfab0f184382d7e09b22cf"
+  } ],
+  "name" : "suites"
+}
