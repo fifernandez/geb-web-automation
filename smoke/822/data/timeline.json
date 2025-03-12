@@ -1,0 +1,26 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "fv-az1380-243",
+    "children" : [ {
+      "name" : "2478@fv-az1380-243.Test worker(1)",
+      "children" : [ {
+        "name" : "Login a valid user",
+        "uid" : "df4f475def18eeef",
+        "parentUid" : "30f98217876a94f2249f6917d860601f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1741747171781,
+          "stop" : 1741747195715,
+          "duration" : 23934
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "30f98217876a94f2249f6917d860601f"
+    } ],
+    "uid" : "ec6fd301890cbfb4633633f65342cde1"
+  } ],
+  "name" : "timeline"
+}
