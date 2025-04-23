@@ -1,0 +1,26 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "children" : [ {
+    "name" : "Log in",
+    "children" : [ {
+      "name" : "Login a valid user",
+      "children" : [ {
+        "name" : "Login a valid user",
+        "uid" : "daf1dc021f751032",
+        "parentUid" : "9f138dba72cbf96c82f0b7dc94eceba8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1745376523566,
+          "stop" : 1745376540125,
+          "duration" : 16559
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "9f138dba72cbf96c82f0b7dc94eceba8"
+    } ],
+    "uid" : "0ef6bae1dcb4a34d5650abf424f0ad29"
+  } ],
+  "name" : "behaviors"
+}
