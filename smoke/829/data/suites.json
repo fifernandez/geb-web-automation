@@ -1,0 +1,22 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "Log in",
+    "children" : [ {
+      "name" : "Login a valid user",
+      "uid" : "a187921900fa173d",
+      "parentUid" : "4f535c939feaeb1cf23eb323f15953c7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1745981410563,
+        "stop" : 1745981418820,
+        "duration" : 8257
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "4f535c939feaeb1cf23eb323f15953c7"
+  } ],
+  "name" : "suites"
+}
