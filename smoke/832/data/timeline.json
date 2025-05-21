@@ -1,0 +1,26 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "pkrvm1036rseh6a",
+    "children" : [ {
+      "name" : "2411@pkrvm1036rseh6a.Test worker(1)",
+      "children" : [ {
+        "name" : "Login a valid user",
+        "uid" : "d99bff5e7657ac07",
+        "parentUid" : "7de4adb3714870eb73522e3458ce8db3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747796164100,
+          "stop" : 1747796178601,
+          "duration" : 14501
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "7de4adb3714870eb73522e3458ce8db3"
+    } ],
+    "uid" : "ec91475c5a350a15f8778e3d78810d3b"
+  } ],
+  "name" : "timeline"
+}
