@@ -1,0 +1,21 @@
+[ {
+  "uid" : "e572700274c96f37",
+  "name" : "Search for present phone",
+  "time" : {
+    "start" : 1751678900672,
+    "stop" : 1751678922283,
+    "duration" : 21611
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ddc43535c1f1f931",
+  "name" : "Search for not present phone",
+  "time" : {
+    "start" : 1751678922352,
+    "stop" : 1751678927053,
+    "duration" : 4701
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
