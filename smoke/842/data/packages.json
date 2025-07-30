@@ -1,0 +1,22 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "src.test.resources.features.Login_feature.Log in",
+    "children" : [ {
+      "name" : "Login a valid user",
+      "uid" : "812fd5e6c3064a10",
+      "parentUid" : "bdb13f9be129e59304108281fa5bb337",
+      "status" : "failed",
+      "time" : {
+        "start" : 1753845553441,
+        "stop" : 1753845569646,
+        "duration" : 16205
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "src.test.resources.features.Login_feature.Log in"
+  } ],
+  "name" : "packages"
+}
