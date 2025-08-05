@@ -1,0 +1,39 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "pkrvm76nib4usnx",
+    "children" : [ {
+      "name" : "2391@pkrvm76nib4usnx.Test worker(1)",
+      "children" : [ {
+        "name" : "Search for not present phone",
+        "uid" : "6db216f940acf52a",
+        "parentUid" : "5ea986ddf8f6353fe9427eb326b9cd52",
+        "status" : "passed",
+        "time" : {
+          "start" : 1754358650630,
+          "stop" : 1754358655420,
+          "duration" : 4790
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Search for present phone",
+        "uid" : "6ef0baba6b1cf223",
+        "parentUid" : "5ea986ddf8f6353fe9427eb326b9cd52",
+        "status" : "passed",
+        "time" : {
+          "start" : 1754358638049,
+          "stop" : 1754358650546,
+          "duration" : 12497
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5ea986ddf8f6353fe9427eb326b9cd52"
+    } ],
+    "uid" : "3c9c52bf75f8a29945dcf3c95ce78222"
+  } ],
+  "name" : "timeline"
+}
