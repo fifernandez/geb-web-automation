@@ -1,0 +1,26 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "runnervm6whdl",
+    "children" : [ {
+      "name" : "2503@runnervm6whdl.Test worker(1)",
+      "children" : [ {
+        "name" : "Login a valid user",
+        "uid" : "3f0e7ae195a89307",
+        "parentUid" : "a05f41a4c0338368e0a9c18de94f5a88",
+        "status" : "passed",
+        "time" : {
+          "start" : 1756867118470,
+          "stop" : 1756867143808,
+          "duration" : 25338
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a05f41a4c0338368e0a9c18de94f5a88"
+    } ],
+    "uid" : "51f8dcf9839a63eef70c64c73f1f6410"
+  } ],
+  "name" : "timeline"
+}
