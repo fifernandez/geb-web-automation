@@ -1,0 +1,35 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "src.test.resources.features.Phones_feature.Phones",
+    "children" : [ {
+      "name" : "Search for present phone",
+      "uid" : "5ccd331c0dde088",
+      "parentUid" : "0c4327e445d9ea1a0150fb4ebf11dd7b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1757035308936,
+        "stop" : 1757035325415,
+        "duration" : 16479
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Search for not present phone",
+      "uid" : "9072dc7dacb8c980",
+      "parentUid" : "0c4327e445d9ea1a0150fb4ebf11dd7b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1757035325482,
+        "stop" : 1757035330213,
+        "duration" : 4731
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "src.test.resources.features.Phones_feature.Phones"
+  } ],
+  "name" : "packages"
+}
