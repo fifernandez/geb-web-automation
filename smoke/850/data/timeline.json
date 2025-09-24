@@ -1,0 +1,26 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "runnervmyfcvg",
+    "children" : [ {
+      "name" : "2415@runnervmyfcvg.Test worker(1)",
+      "children" : [ {
+        "name" : "Login a valid user",
+        "uid" : "c3a76312c1ac2ea1",
+        "parentUid" : "3eb7b8fba5600cbf8dd4c6588bb0119e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758681753532,
+          "stop" : 1758681770729,
+          "duration" : 17197
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3eb7b8fba5600cbf8dd4c6588bb0119e"
+    } ],
+    "uid" : "fa11e2bc8b17756b4969228061b71c96"
+  } ],
+  "name" : "timeline"
+}
