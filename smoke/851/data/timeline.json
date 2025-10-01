@@ -1,0 +1,26 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "runnervmbvass",
+    "children" : [ {
+      "name" : "2408@runnervmbvass.Test worker(1)",
+      "children" : [ {
+        "name" : "Login a valid user",
+        "uid" : "da2e0d298166d8e5",
+        "parentUid" : "3caf2fce4a1dcf3d5aec749e6b1db813",
+        "status" : "passed",
+        "time" : {
+          "start" : 1759287256018,
+          "stop" : 1759287274475,
+          "duration" : 18457
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3caf2fce4a1dcf3d5aec749e6b1db813"
+    } ],
+    "uid" : "f0dffe366fc7eb11f622a28d41b10c4e"
+  } ],
+  "name" : "timeline"
+}
