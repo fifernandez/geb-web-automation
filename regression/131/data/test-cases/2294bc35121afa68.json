@@ -1,0 +1,236 @@
+{
+  "uid" : "2294bc35121afa68",
+  "name" : "Search for not present phone",
+  "fullName" : "Phones: Search for not present phone",
+  "historyId" : "652259ca9d9b8e5656ab81fdd9e89432",
+  "time" : {
+    "start" : 1759628192353,
+    "stop" : 1759628197072,
+    "duration" : 4719
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "env.groovy:15",
+    "time" : {
+      "start" : 1759628192353,
+      "stop" : 1759628192541,
+      "duration" : 188
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given  I go to the 'Home' page",
+      "time" : {
+        "start" : 1759628192542,
+        "stop" : 1759628194731,
+        "duration" : 2189
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And  on the 'Home' page for categories I click on: 'Phones'",
+      "time" : {
+        "start" : 1759628194732,
+        "stop" : 1759628197022,
+        "duration" : 2290
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And  on the 'Home' page I should not see a product with name 'Invalid Phone'",
+      "time" : {
+        "start" : 1759628197022,
+        "stop" : 1759628197071,
+        "duration" : 49
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "env.groovy:20",
+    "time" : {
+      "start" : 1759628197071,
+      "stop" : 1759628197072,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "DemoBlaze"
+  }, {
+    "name" : "tag",
+    "value" : "Phones"
+  }, {
+    "name" : "tag",
+    "value" : "regression"
+  }, {
+    "name" : "tag",
+    "value" : "prod"
+  }, {
+    "name" : "tag",
+    "value" : "this"
+  }, {
+    "name" : "host",
+    "value" : "runnervmafkv5"
+  }, {
+    "name" : "thread",
+    "value" : "2428@runnervmafkv5.Test worker(1)"
+  }, {
+    "name" : "feature",
+    "value" : "Phones"
+  }, {
+    "name" : "story",
+    "value" : "Search for not present phone"
+  }, {
+    "name" : "suite",
+    "value" : "Phones"
+  }, {
+    "name" : "testClass",
+    "value" : "Search for not present phone"
+  }, {
+    "name" : "framework",
+    "value" : "cucumber4jvm"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "gherkin_uri",
+    "value" : "file:///home/runner/work/geb-web-automation/geb-web-automation/src/test/resources/features/Phones.feature"
+  }, {
+    "name" : "package",
+    "value" : "src.test.resources.features.Phones_feature.Phones"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 8,
+        "unknown" : 0,
+        "total" : 8
+      },
+      "items" : [ {
+        "uid" : "9072dc7dacb8c980",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/130//#testresult/9072dc7dacb8c980",
+        "status" : "passed",
+        "time" : {
+          "start" : 1757035325482,
+          "stop" : 1757035330213,
+          "duration" : 4731
+        }
+      }, {
+        "uid" : "6db216f940acf52a",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/129//#testresult/6db216f940acf52a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1754358650630,
+          "stop" : 1754358655420,
+          "duration" : 4790
+        }
+      }, {
+        "uid" : "ddc43535c1f1f931",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/128//#testresult/ddc43535c1f1f931",
+        "status" : "passed",
+        "time" : {
+          "start" : 1751678922352,
+          "stop" : 1751678927053,
+          "duration" : 4701
+        }
+      }, {
+        "uid" : "a0cf63b834e2846b",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/127//#testresult/a0cf63b834e2846b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1749087758599,
+          "stop" : 1749087763318,
+          "duration" : 4719
+        }
+      }, {
+        "uid" : "31e41068da3c48d8",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/126//#testresult/31e41068da3c48d8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1746409125891,
+          "stop" : 1746409130875,
+          "duration" : 4984
+        }
+      }, {
+        "uid" : "f250877fdbabea7",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/125//#testresult/f250877fdbabea7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1743816084521,
+          "stop" : 1743816089294,
+          "duration" : 4773
+        }
+      }, {
+        "uid" : "d01b86a5ff40c32",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/regression/124//#testresult/d01b86a5ff40c32",
+        "status" : "passed",
+        "time" : {
+          "start" : 1741153553227,
+          "stop" : 1741153557918,
+          "duration" : 4691
+        }
+      } ]
+    },
+    "tags" : [ "prod", "Phones", "DemoBlaze", "regression", "this" ]
+  },
+  "source" : "2294bc35121afa68.json",
+  "parameterValues" : [ ]
+}
