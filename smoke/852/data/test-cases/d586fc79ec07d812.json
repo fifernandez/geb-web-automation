@@ -1,0 +1,367 @@
+{
+  "uid" : "d586fc79ec07d812",
+  "name" : "Login a valid user",
+  "fullName" : "Log in: Login a valid user",
+  "historyId" : "ba044272b2b495486400b715a908e7e8",
+  "time" : {
+    "start" : 1759891252121,
+    "stop" : 1759891265562,
+    "duration" : 13441
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "env.groovy:15",
+    "time" : {
+      "start" : 1759891252124,
+      "stop" : 1759891259413,
+      "duration" : 7289
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given  I go to the 'Home' page",
+      "time" : {
+        "start" : 1759891259416,
+        "stop" : 1759891262627,
+        "duration" : 3211
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And  on the 'Home' page I click on: 'Log in'",
+      "time" : {
+        "start" : 1759891262628,
+        "stop" : 1759891263040,
+        "duration" : 412
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And  on the 'Login' page I enter credentials for 'ff-test' user",
+      "time" : {
+        "start" : 1759891263041,
+        "stop" : 1759891265534,
+        "duration" : 2493
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And  on the 'Home' page the logout button should be visible",
+      "time" : {
+        "start" : 1759891265535,
+        "stop" : 1759891265553,
+        "duration" : 18
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "env.groovy:20",
+    "time" : {
+      "start" : 1759891265554,
+      "stop" : 1759891265561,
+      "duration" : 7
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "DemoBlaze"
+  }, {
+    "name" : "tag",
+    "value" : "Login"
+  }, {
+    "name" : "tag",
+    "value" : "smoke"
+  }, {
+    "name" : "tag",
+    "value" : "prod"
+  }, {
+    "name" : "host",
+    "value" : "runnervmafkv5"
+  }, {
+    "name" : "thread",
+    "value" : "2558@runnervmafkv5.Test worker(1)"
+  }, {
+    "name" : "feature",
+    "value" : "Log in"
+  }, {
+    "name" : "story",
+    "value" : "Login a valid user"
+  }, {
+    "name" : "suite",
+    "value" : "Log in"
+  }, {
+    "name" : "testClass",
+    "value" : "Login a valid user"
+  }, {
+    "name" : "framework",
+    "value" : "cucumber4jvm"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "gherkin_uri",
+    "value" : "file:///home/runner/work/geb-web-automation/geb-web-automation/src/test/resources/features/Login.feature"
+  }, {
+    "name" : "package",
+    "value" : "src.test.resources.features.Login_feature.Log in"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 1,
+        "passed" : 32,
+        "unknown" : 0,
+        "total" : 35
+      },
+      "items" : [ {
+        "uid" : "da2e0d298166d8e5",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/851//#testresult/da2e0d298166d8e5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1759287256018,
+          "stop" : 1759287274475,
+          "duration" : 18457
+        }
+      }, {
+        "uid" : "c3a76312c1ac2ea1",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/850//#testresult/c3a76312c1ac2ea1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758681753532,
+          "stop" : 1758681770729,
+          "duration" : 17197
+        }
+      }, {
+        "uid" : "88320c011a49d212",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/849//#testresult/88320c011a49d212",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758076770011,
+          "stop" : 1758076791646,
+          "duration" : 21635
+        }
+      }, {
+        "uid" : "ef23b7c308820f53",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/848//#testresult/ef23b7c308820f53",
+        "status" : "passed",
+        "time" : {
+          "start" : 1757471927013,
+          "stop" : 1757471943387,
+          "duration" : 16374
+        }
+      }, {
+        "uid" : "3f0e7ae195a89307",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/847//#testresult/3f0e7ae195a89307",
+        "status" : "passed",
+        "time" : {
+          "start" : 1756867118470,
+          "stop" : 1756867143808,
+          "duration" : 25338
+        }
+      }, {
+        "uid" : "67edfc47ece52c93",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/846//#testresult/67edfc47ece52c93",
+        "status" : "passed",
+        "time" : {
+          "start" : 1756262772662,
+          "stop" : 1756262810989,
+          "duration" : 38327
+        }
+      }, {
+        "uid" : "7962fb4b320dd186",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/845//#testresult/7962fb4b320dd186",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755658303625,
+          "stop" : 1755658319489,
+          "duration" : 15864
+        }
+      }, {
+        "uid" : "80e1cd8541160ad1",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/844//#testresult/80e1cd8541160ad1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1755054303509,
+          "stop" : 1755054321271,
+          "duration" : 17762
+        }
+      }, {
+        "uid" : "b0bb06585b5a430c",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/843//#testresult/b0bb06585b5a430c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1754450387018,
+          "stop" : 1754450400725,
+          "duration" : 13707
+        }
+      }, {
+        "uid" : "812fd5e6c3064a10",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/842//#testresult/812fd5e6c3064a10",
+        "status" : "failed",
+        "statusDetails" : "condition did not pass in 5 seconds. Failed with exception:\ngeb.error.RequiredPageContentNotPresent: The required page content 'pages.HomePage -> logo: geb.navigator.DefaultNavigator' is not present",
+        "time" : {
+          "start" : 1753845553441,
+          "stop" : 1753845569646,
+          "duration" : 16205
+        }
+      }, {
+        "uid" : "f10a1e9689580b16",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/841//#testresult/f10a1e9689580b16",
+        "status" : "failed",
+        "statusDetails" : "condition did not pass in 5 seconds. Failed with exception:\ngeb.error.RequiredPageContentNotPresent: The required page content 'pages.HomePage -> logo: geb.navigator.DefaultNavigator' is not present",
+        "time" : {
+          "start" : 1753240538930,
+          "stop" : 1753240554132,
+          "duration" : 15202
+        }
+      }, {
+        "uid" : "a311d226deb5299c",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/840//#testresult/a311d226deb5299c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1752635591811,
+          "stop" : 1752635605136,
+          "duration" : 13325
+        }
+      }, {
+        "uid" : "33d8fc90f5368762",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/839//#testresult/33d8fc90f5368762",
+        "status" : "passed",
+        "time" : {
+          "start" : 1752030496882,
+          "stop" : 1752030518745,
+          "duration" : 21863
+        }
+      }, {
+        "uid" : "31d7edf91630f4ab",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/838//#testresult/31d7edf91630f4ab",
+        "status" : "passed",
+        "time" : {
+          "start" : 1751425471350,
+          "stop" : 1751425484624,
+          "duration" : 13274
+        }
+      }, {
+        "uid" : "b9057a396807e34e",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/837//#testresult/b9057a396807e34e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750820769134,
+          "stop" : 1750820785549,
+          "duration" : 16415
+        }
+      }, {
+        "uid" : "b447c53c31f8e622",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/836//#testresult/b447c53c31f8e622",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750215603025,
+          "stop" : 1750215617244,
+          "duration" : 14219
+        }
+      }, {
+        "uid" : "f903706ff4e4a275",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/835//#testresult/f903706ff4e4a275",
+        "status" : "passed",
+        "time" : {
+          "start" : 1749610932887,
+          "stop" : 1749610961063,
+          "duration" : 28176
+        }
+      }, {
+        "uid" : "38bec0c7d619e446",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/834//#testresult/38bec0c7d619e446",
+        "status" : "passed",
+        "time" : {
+          "start" : 1749006253916,
+          "stop" : 1749006269608,
+          "duration" : 15692
+        }
+      }, {
+        "uid" : "2e1761088fc9fc49",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/833//#testresult/2e1761088fc9fc49",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748401298235,
+          "stop" : 1748401312568,
+          "duration" : 14333
+        }
+      }, {
+        "uid" : "d99bff5e7657ac07",
+        "reportUrl" : "https://fifernandez.github.io/geb-web-automation/smoke/832//#testresult/d99bff5e7657ac07",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747796164100,
+          "stop" : 1747796178601,
+          "duration" : 14501
+        }
+      } ]
+    },
+    "tags" : [ "prod", "DemoBlaze", "smoke", "Login" ]
+  },
+  "source" : "d586fc79ec07d812.json",
+  "parameterValues" : [ ]
+}
