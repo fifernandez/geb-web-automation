@@ -1,0 +1,26 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "runnervmnfq8z",
+    "children" : [ {
+      "name" : "2525@runnervmnfq8z.Test worker(1)",
+      "children" : [ {
+        "name" : "Login a valid user",
+        "uid" : "61dea0ff7092b069",
+        "parentUid" : "698a8fc6ef1787528a9b71541ae4c51c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761101580162,
+          "stop" : 1761101594549,
+          "duration" : 14387
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "698a8fc6ef1787528a9b71541ae4c51c"
+    } ],
+    "uid" : "517e18cc29a1e34e6523f284ca057569"
+  } ],
+  "name" : "timeline"
+}
