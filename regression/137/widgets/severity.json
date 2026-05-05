@@ -1,0 +1,1 @@
+[{"uid":"49843ecacc2ae2db","name":"Search for not present phone","time":{"start":1777949877305,"stop":1777949881956,"duration":4651},"status":"passed","severity":"normal"},{"uid":"4b8c07962ec3f1e7","name":"Search for present phone","time":{"start":1777949861764,"stop":1777949877209,"duration":15445},"status":"passed","severity":"normal"}]
