@@ -1,0 +1,3 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","4829","Search for not present phone","","Fri Jun 05 04:03:14 UTC 2026","passed","Fri Jun 05 04:03:19 UTC 2026","","Phones","Search for not present phone",""
+"","18641","Search for present phone","","Fri Jun 05 04:02:56 UTC 2026","passed","Fri Jun 05 04:03:14 UTC 2026","","Phones","Search for present phone",""
